@@ -21,7 +21,7 @@ public class Gun_Parent_Boss : MonoBehaviour
                 Blood -= dam;
                 if (Blood <= 0)
                 {
-                    Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion);
+                    Transform vfx = ObjectPutter.getInstance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
                     vfx.position = transform.position;
                     destroyed++;
                     HealthBarParent.SetActive(false);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : BaseEnemy
+public class Boss : EnermyMove
 {
     private bool isProtected;
     public bool isLastState;
@@ -36,40 +36,40 @@ public class Boss : BaseEnemy
         ani.SetBool("last", true);
         GetComponent<CircleCollider2D>().enabled = false;
     }
-    
+
     public void SetLastFire()
     {
         isProtected = false;
         GetComponent<BoxCollider2D>().enabled = true;
     }
-    public override void DecreaHealth(int bulletDamage)
+    public void BeHurt(int bulletDamage)
     {
         if (isLastState)
         {
-            if (!isProtected)
-            {
-                currentHealth -= bulletDamage;
-            }
-            if (currentHealth <= 0)
-            {
-                Transform explosion = ObjectPutter.Instance.PutObject(SpawnerType.MediumExplosion);
-                explosion.position = transform.position;
-                gameObject.SetActive(false);
-                if (GameObject.Find("UI") != null)
-                {
-                    GameObject a = GameObject.Find("UI");
-                    a.GetComponent<UI>().showPanel(true);
-                }
-                else
-                {
-                    Debug.Log("k tim thay");
-                }
-            }
-            else
-            {
-                float scale = currentHealth * 0.01f;
-                HealthBar.transform.localScale = new Vector3(scale / 5, 1, 1);
-            }
+            //if (!isProtected)
+            //{
+            //    currentHealth -= bulletDamage;
+            //}
+            //if (currentHealth <= 0)
+            //{
+            //    Transform explosion = ObjectPutter.Instance.PutObject(SpawnerType.MediumExplosion);
+            //    explosion.position = transform.position;
+            //    gameObject.SetActive(false);
+            //    if (GameObject.Find("UI") != null)
+            //    {
+            //        GameObject a = GameObject.Find("UI");
+            //        a.GetComponent<UI>().showPanel(true);
+            //    }
+            //    else
+            //    {
+            //        Debug.Log("k tim thay");
+            //    }
+            //}
+            //else
+            //{
+            //    float scale = currentHealth * 0.01f;
+            //    HealthBar.transform.localScale = new Vector3(scale / 5, 1, 1);
+            //}
         }
     }
 }

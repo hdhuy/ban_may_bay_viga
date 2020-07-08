@@ -19,7 +19,7 @@ public class Gun_Mini_Boss : Gun_Parent_Boss
     {
         if (Blood > 0)
         {
-            Transform a = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Mini_Boss);
+            Transform a = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Mini_Boss, ObjectType.Bullet);
             a.position = FirePoint.position;
             a.rotation = FirePoint.rotation;
             a.GetComponent<Bullet>().Activate();

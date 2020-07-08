@@ -48,7 +48,7 @@ public class Bullet_Wing_Boss : Bullet
     {
         try
         {
-            Transform a = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Mini_Wing_Boss);
+            Transform a = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Mini_Wing_Boss,ObjectType.Bullet);
             a.Rotate(new Vector3(0, 0, z));
             a.position = transform.position;
             a.GetComponent<Bullet>().Activate();

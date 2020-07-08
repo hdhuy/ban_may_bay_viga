@@ -17,18 +17,21 @@ public class Spawner : MonoBehaviour
         SpawnerType = type;
         prefab = targetPrefab;
     }
-
-    protected virtual Transform Pop()
+    public Transform Spawn()
+    {
+        return ReuseOrCreateNew();
+    }
+    protected virtual Transform ReuseOrCreateNew()
     {
         try
         {
             //tìm gobj chưa active
-            Transform popTransform = (from p in spawnList where !p.gameObject.activeSelf select p).FirstOrDefault();
+            Transform searching = (from p in spawnList where !p.gameObject.activeSelf select p).FirstOrDefault();
             //tìm được thì active
-            if (popTransform != null)
+            if (searching != null)
             {
-                popTransform.gameObject.SetActive(true);
-                return popTransform;
+                searching.gameObject.SetActive(true);
+                return searching;
             }
             //nếu không tìm đc thì tạo game obj mới
             GameObject popGameObject = Instantiate(prefab, transform);
@@ -38,15 +41,11 @@ public class Spawner : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.Log("Loi pop (spawne): " + e);
+            Debug.Log("Lỗi tái sử dụng và tạo mới: " + e);
             return null;
         }
         
     }
 
-    public Transform Spawn()
-    {
-        return Pop();
-
-    }
+    
 }

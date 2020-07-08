@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Player
 {
     public int Health = 100;
     public int CurrentHealth;
@@ -13,24 +13,23 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("EnermyBullet"))
         {
             int dam = collision.gameObject.GetComponent<Bullet>().damage;
-            beHurt(dam);
+            BeHurt(dam);
             //eff
-            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.VFXSpark);
+            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
             exp.position = collision.transform.position;
             collision.gameObject.SetActive(false);
         }
         Debug.Log(collision.tag);
     }
-    private void beHurt(int dam)
+    private void BeHurt(int dam)
     {
         CurrentHealth -= dam;
         if (CurrentHealth <= 0)
         {
-            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.PlayerExplosion);
+            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
             exp.position = transform.position;
             HealthBar.transform.localScale = new Vector3(0, 1, 1);
             Destroy(gameObject);
@@ -41,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                Debug.Log("k tim thay");
+                Debug.Log("Không tìm thấy UI");
             }
         }
         else
