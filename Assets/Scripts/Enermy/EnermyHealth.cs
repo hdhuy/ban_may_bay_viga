@@ -20,6 +20,7 @@ public class EnermyHealth : Enermy
         if (collision.CompareTag("PlayerBullet"))
         {
             int dam = collision.GetComponent<Bullet>().damage;
+            BeHurt(dam);
         }
     }
     public virtual void BeHurt(int dam)
@@ -39,7 +40,7 @@ public class EnermyHealth : Enermy
             }
             explosion.position = transform.position;
             SpawnCoin();
-            Reset();
+            gameObject.SetActive(false);
         }
     }
     public virtual void SpawnCoin()

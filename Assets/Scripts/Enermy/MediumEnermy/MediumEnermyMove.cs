@@ -14,7 +14,7 @@ public class MediumEnermyMove : EnermyMove
     {
         if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
         {
-            Vector3 player = GameObject.Find("Player").transform.position;
+            Vector3 player = GameObject.FindGameObjectWithTag("Player").transform.position;
             float z = 20;
             if (player.x == transform.position.x)
             {
@@ -27,6 +27,7 @@ public class MediumEnermyMove : EnermyMove
                     z = -20;
                 }
             }
+            Debug.Log(z);
             transform.DORotate(new Vector3(0, 0, z), 1);
             yield return new WaitForSeconds(1);
             StartCoroutine(Look());

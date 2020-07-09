@@ -35,6 +35,10 @@ public class EnermyMove : Enermy
                 {
                     if (!additionPath)
                     {
+                        gameObject.SetActive(false);
+                    }
+                    else
+                    {
                         ContinueAdditionPath();
                     }
                 };
@@ -51,6 +55,10 @@ public class EnermyMove : Enermy
                 .onComplete += delegate
                 {
                     if (!additionPath)
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    else
                     {
                         ContinueAdditionPath();
                     }

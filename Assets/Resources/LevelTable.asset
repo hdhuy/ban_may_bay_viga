@@ -23,10 +23,18 @@ MonoBehaviour:
         type: 3}
       additionPath: {fileID: 0}
     - timeStart: 3
-      timeDelay: 0.4
+      timeDelay: 0.6
       enemyType: 0
       enemyNum: 5
       isRotateToPath: 1
       mainPath: {fileID: 6663400309764260989, guid: 4994ffd8bd61b3742829c17376c8fda9,
+        type: 3}
+      additionPath: {fileID: 0}
+    - timeStart: 1
+      timeDelay: 0.6
+      enemyType: 1
+      enemyNum: 1
+      isRotateToPath: 1
+      mainPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
         type: 3}
       additionPath: {fileID: 0}

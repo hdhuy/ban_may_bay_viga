@@ -17,10 +17,10 @@ public class PlayerAttack : Player
 
     private IEnumerator SpawnBullet()
     {
-        createBullet(ListFirepoint[0], ListShootEffect[0],.7f);
-        createBullet(ListFirepoint[1], ListShootEffect[1],-.7f);
-        createBullet(ListFirepoint[2], ListShootEffect[2],1.7f);
-        createBullet(ListFirepoint[3], ListShootEffect[3],-1.7f);
+        createBullet(ListFirepoint[0], ListShootEffect[0],.5f);
+        createBullet(ListFirepoint[1], ListShootEffect[1],-.5f);
+        createBullet(ListFirepoint[2], ListShootEffect[2],1.5f);
+        createBullet(ListFirepoint[3], ListShootEffect[3],-1.5f);
         yield return null;
     }
     private void createBullet(Transform t,ParticleSystem p,float z)

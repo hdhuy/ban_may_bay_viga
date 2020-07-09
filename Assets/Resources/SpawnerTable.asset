@@ -76,5 +76,29 @@ MonoBehaviour:
     type: 17
     prefab: {fileID: 6720538157419241458, guid: 09891e4a281b6844e960e120d9ddfcee,
       type: 3}
-  ListEffect: []
-  ListCoin: []
+  ListEffect:
+  - Name: vfx spark
+    type: 11
+    prefab: {fileID: 1790001722138348291, guid: 6192f1a2765246038effceecc6188f88,
+      type: 3}
+  - Name: small explosion
+    type: 12
+    prefab: {fileID: 1790001722138347868, guid: a144ddec0a1d49feb0215c078710bc7f,
+      type: 3}
+  - Name: medium explosion
+    type: 13
+    prefab: {fileID: 1790001722138348062, guid: 59f430ddf8344b49984ebba327f9537b,
+      type: 3}
+  - Name: player explosion
+    type: 14
+    prefab: {fileID: 1790001722138348062, guid: 59f430ddf8344b49984ebba327f9537b,
+      type: 3}
+  ListCoin:
+  - Name: coin normal
+    type: 15
+    prefab: {fileID: 3096861034218901560, guid: 90eaaee74f14b274fb9eceac3313d917,
+      type: 3}
+  - Name: coin high
+    type: 16
+    prefab: {fileID: 3085556349696369925, guid: 15c81faa1c40c3f49a00f737eac44fbe,
+      type: 3}

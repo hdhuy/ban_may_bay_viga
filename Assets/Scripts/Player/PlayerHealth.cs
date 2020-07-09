@@ -22,7 +22,6 @@ public class PlayerHealth : Player
             exp.position = collision.transform.position;
             collision.gameObject.SetActive(false);
         }
-        Debug.Log(collision.tag);
     }
     private void BeHurt(int dam)
     {

@@ -74,7 +74,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
-  duration: 5
+  duration: 7
   easeType: 6
   easeCurve:
     serializedVersion: 2

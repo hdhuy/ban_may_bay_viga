@@ -11,29 +11,17 @@ public class SpawnerTable : ScriptableObject
     [SerializeField] private List<SpawnerInfo> ListCoin;
     public SpawnerInfo GetSpawnerInfo(SpawnerType type, ObjectType a)
     {
-        if (a==ObjectType.Bullet)
+        switch (a)
         {
-            return ListBullet.FirstOrDefault(n => n.type == type);
-        }
-        else
-        {
-            if (a == ObjectType.Enermy)
-            {
+            case ObjectType.Bullet:
+                return ListBullet.FirstOrDefault(n => n.type == type);
+            case ObjectType.Enermy:
                 return ListEnermy.FirstOrDefault(n => n.type == type);
-            }
-            else
-            {
-                if (a == ObjectType.Coin)
-                {
-                    return ListEnermy.FirstOrDefault(n => n.type == type);
-                }
-                else
-                {
-                    //effect
-                    return ListEffect.FirstOrDefault(n => n.type == type);
-                }
-            }
+            case ObjectType.Coin:
+                return ListCoin.FirstOrDefault(n => n.type == type);
+            case ObjectType.Effect:
+                return ListEffect.FirstOrDefault(n => n.type == type);
+            default: return ListEffect.FirstOrDefault(n => n.type == type);
         }
-        
     }
 }

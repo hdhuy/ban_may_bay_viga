@@ -302,11 +302,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4951937000471720905}
   - component: {fileID: -8011865122590814824}
-  - component: {fileID: 8388823350419266604}
   - component: {fileID: 4951937000471720906}
   - component: {fileID: 4951937000471720885}
   - component: {fileID: 72763359538036571}
-  - component: {fileID: -4845128447997023572}
+  - component: {fileID: 6043830829399855700}
+  - component: {fileID: 3762741751970578777}
   m_Layer: 0
   m_Name: MediumEnermy
   m_TagString: Enermy
@@ -342,29 +342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c8a4200b6f9904ca658d251457dd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8388823350419266604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4951937000471720884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0813bdb6d980e9d4e92b2faf0d974a0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listFirePoint:
-  - {fileID: 6225770104040257274}
-  - {fileID: 5178766144242807196}
-  - {fileID: 722489506744204886}
-  - {fileID: 4440049181207253348}
-  - {fileID: 1142693841964983832}
-  - {fileID: 1185089641038443708}
-  - {fileID: 3575757775316069442}
-  rotZ:
-  - 10
-  - 20
 --- !u!58 &4951937000471720906
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -428,7 +405,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6971237, y: 0.6496136}
   m_EdgeRadius: 0
---- !u!114 &-4845128447997023572
+--- !u!114 &6043830829399855700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,14 +414,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 4951937000471720884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0604571c5eb4d5147b0fe976ddc12c35, type: 3}
+  m_Script: {fileID: 11500000, guid: 0813bdb6d980e9d4e92b2faf0d974a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  currentHealth: 0
-  explosionType: 1
-  healthBar: {fileID: 4816331504184734182}
-  currentHealthBar: {fileID: 4909820956052548538}
+  Mid: {fileID: 6225770104040257274}
+  Left_1: {fileID: 5178766144242807196}
+  Left_2: {fileID: 722489506744204886}
+  Left_3: {fileID: 4440049181207253348}
+  Right_1: {fileID: 1142693841964983832}
+  Right_2: {fileID: 1185089641038443708}
+  Right_3: {fileID: 3575757775316069442}
+--- !u!114 &3762741751970578777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951937000471720884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7d79d3ac646ea4f8243aa341884fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blood: 100
+  CurrentBlood: 100
+  ExplosionType: 1
 --- !u!1 &4951937000740139472
 GameObject:
   m_ObjectHideFlags: 0
