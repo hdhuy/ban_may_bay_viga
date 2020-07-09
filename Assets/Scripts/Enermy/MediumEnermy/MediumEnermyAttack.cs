@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class MediumEnermyAttack : MonoBehaviour
 {
-    [SerializeField]
-    private Transform Mid;
+    public Transform Mid;
 
-    [SerializeField]
-    private Transform Left_1;
+    public Transform Left_1;
 
-    [SerializeField]
-    private Transform Left_2;
+    public Transform Left_2;
 
-    [SerializeField]
-    private Transform Left_3;
+    public Transform Left_3;
 
-    [SerializeField]
-    private Transform Right_1;
+    public Transform Right_1;
 
-    [SerializeField]
-    private Transform Right_2;
+    public Transform Right_2;
 
-    [SerializeField]
-    private Transform Right_3;
+    public Transform Right_3;
     //[SerializeField]
     //private List<float> rotZ;
     void Start()

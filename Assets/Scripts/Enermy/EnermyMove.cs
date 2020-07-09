@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class EnermyMove : Enermy
 {
-    //path chính
     private DOTweenPath mainPath;
-    //path phụ
-    private DOTweenPath additionPath;
-    //xoay theo path
+
     private bool isRotateToPath;
-    public void Init(DOTweenPath _mainPath, DOTweenPath _additionPath, bool _isRotateToPath)
+
+    public void Init(DOTweenPath _mainPath, bool _isRotateToPath)
     {
         mainPath = _mainPath;
-        additionPath = _additionPath;
+        //additionPath = _additionPath;
         transform.position = mainPath.wps[0];
         isRotateToPath = _isRotateToPath;
-        MoveByDOTween();
+        StartMove();
     }
-    public virtual void MoveByDOTween()
+
+    public virtual void StartMove()
     {
-        //nếu xoay theo path
         if (isRotateToPath)
         {
-            //cac thuoc tinh DO
             transform.DOPath(mainPath.wps.ToArray(), mainPath.duration, mainPath.pathType, PathMode.TopDown2D, mainPath.pathResolution)
                 .SetOptions(mainPath.isClosedPath)
                 .SetDelay(mainPath.delay)
@@ -33,16 +30,8 @@ public class EnermyMove : Enermy
                 .SetEase(mainPath.easeCurve)
                 .onComplete += delegate
                 {
-                    if (!additionPath)
-                    {
-                        gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        ContinueAdditionPath();
-                    }
+                    DeActivate();
                 };
-            //--cac thuoc tinh DO
         }
         else
         {
@@ -54,30 +43,21 @@ public class EnermyMove : Enermy
                 .SetEase(mainPath.easeCurve)
                 .onComplete += delegate
                 {
-                    if (!additionPath)
-                    {
-                        gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        ContinueAdditionPath();
-                    }
+                    DeActivate();
                 };
         }
 
     }
-    //path bổ sung
+
     protected void ContinueAdditionPath()
     {
-        transform.DOPath(additionPath.wps.ToArray(), additionPath.duration, additionPath.pathType, PathMode.TopDown2D,
-                additionPath.pathResolution)
-            .SetOptions(additionPath.isClosedPath)
-            .SetDelay(additionPath.delay)
-            .SetLoops(additionPath.loops, additionPath.loopType)
-            .SetSpeedBased(additionPath.isSpeedBased)
-            .SetEase(additionPath.easeCurve);
+        //transform.DOPath(additionPath.wps.ToArray(), additionPath.duration, additionPath.pathType, PathMode.TopDown2D,
+        //        additionPath.pathResolution)
+        //    .SetOptions(additionPath.isClosedPath)
+        //    .SetDelay(additionPath.delay)
+        //    .SetLoops(additionPath.loops, additionPath.loopType)
+        //    .SetSpeedBased(additionPath.isSpeedBased)
+        //    .SetEase(additionPath.easeCurve);
     }
-   //spawner
-    
-    
+
 }

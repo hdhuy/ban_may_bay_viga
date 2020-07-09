@@ -24,40 +24,24 @@ MonoBehaviour:
     type: 2
     prefab: {fileID: 4103020900378437419, guid: 87617eac996891c4aacacab4da4c7bc3,
       type: 3}
-  - Name: bullet wing 1
+  - Name: 'bullet wing '
     type: 3
     prefab: {fileID: 172403531053042163, guid: 28fb3deb9dcb550479699c76646c9bb2, type: 3}
-  - Name: bulelt mini wing 2
+  - Name: bulelt mini wing
     type: 4
+    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
+      type: 3}
+  - Name: 'bulelt mini '
+    type: 5
+    prefab: {fileID: 6286884927752897843, guid: f80787f837f15e5429dce90fd8420609,
+      type: 3}
+  - Name: 'bulelt wave '
+    type: 6
+    prefab: {fileID: 6192419310027714724, guid: c15fd74b674458449adec4f066b84707,
+      type: 3}
+  - Name: bulelt2 wave boss
+    type: 7
     prefab: {fileID: 8424398076717742871, guid: 26a84b34f878cf045ad95201967c4401,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
-      type: 3}
-  - Name: bulelt mini boss
-    type: 5
-    prefab: {fileID: 5980250841902611728, guid: bbd1b86ffc34e964f8790853e0a37ffd,
       type: 3}
   ListEnermy:
   - Name: low enermy

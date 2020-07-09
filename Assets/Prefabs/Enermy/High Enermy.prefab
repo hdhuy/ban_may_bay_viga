@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3475693186637526969}
   - component: {fileID: 3475693186637526968}
   - component: {fileID: 7581191266046156529}
+  - component: {fileID: -8034098954702799484}
   m_Layer: 0
-  m_Name: EnermyHigh
+  m_Name: High Enermy
   m_TagString: Enermy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,9 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a508c997da3ccc348bce31d2b92d17ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  currentHealth: 100
-  explosionType: 1
 --- !u!114 &7581191266046156529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +108,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931baf31e042e324c8afcffd4a75bf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l:
-  - {fileID: 3475693187322462362}
-  - {fileID: 3475693187068361136}
-  - {fileID: 3475693187515820525}
+  Mid: {fileID: 3475693187515820525}
+  Left: {fileID: 3475693187322462362}
+  Right: {fileID: 3475693187068361136}
+--- !u!114 &-8034098954702799484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475693186637526971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7d79d3ac646ea4f8243aa341884fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blood: 100
+  CurrentBlood: 100
+  ExplosionType: 1
 --- !u!1 &3475693187068361139
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3475693187068361136}
   m_Layer: 0
-  m_Name: p2
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3475693187322462362}
   m_Layer: 0
-  m_Name: p1
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3475693187515820525}
   m_Layer: 0
-  m_Name: p3
+  m_Name: mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

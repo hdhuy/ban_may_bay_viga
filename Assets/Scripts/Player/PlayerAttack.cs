@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class PlayerAttack : Player
 {
-    [SerializeField]
-    private float BulletSpeed;
-    [SerializeField]
-    private List<Transform> ListFirepoint;
+    public float BulletSpeed;
+    public List<Transform> ListFirepoint;
 
-    [SerializeField]
-    private List<ParticleSystem> ListShootEffect;
+    public List<ParticleSystem> ListShootEffect;
 
     private float fire_rate_weapon = 0.15f;
 
 
     private IEnumerator SpawnBullet()
     {
-        createBullet(ListFirepoint[0], ListShootEffect[0],.5f);
-        createBullet(ListFirepoint[1], ListShootEffect[1],-.5f);
+        createBullet(ListFirepoint[0], ListShootEffect[0],.3f);
+        createBullet(ListFirepoint[1], ListShootEffect[1],-.3f);
         createBullet(ListFirepoint[2], ListShootEffect[2],1.5f);
         createBullet(ListFirepoint[3], ListShootEffect[3],-1.5f);
         yield return null;

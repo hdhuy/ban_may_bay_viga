@@ -67,10 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c931aa5056d60a4d8092450fa4a485a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 2
   damage: 5
   Target: {fileID: 0}
-  RotSpeed: 500
+  RotSpeed: 180
   isMoveToTarget: 0
 --- !u!61 &133396603861603543
 BoxCollider2D:
@@ -4945,12 +4945,12 @@ PrefabInstance:
     - target: {fileID: 452426797526175543, guid: 83ba0a2ff8d5b8844bd277d62e41acd3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.263
+      value: 0.288
       objectReference: {fileID: 0}
     - target: {fileID: 452426797526175543, guid: 83ba0a2ff8d5b8844bd277d62e41acd3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.059
+      value: -0.003
       objectReference: {fileID: 0}
     - target: {fileID: 452426797526175543, guid: 83ba0a2ff8d5b8844bd277d62e41acd3,
         type: 3}

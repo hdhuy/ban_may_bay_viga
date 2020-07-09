@@ -16,6 +16,4 @@ public class Orbit
     public bool isRotateToPath;
 
     public DOTweenPath mainPath;
-
-    public DOTweenPath additionPath;
 }

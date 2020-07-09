@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8424398076717742859}
   - component: {fileID: 8424398076717742858}
   - component: {fileID: 8424398076717742857}
-  - component: {fileID: 8424398076717742856}
+  - component: {fileID: -7490340072911690994}
   m_Layer: 0
   m_Name: Bullet2_Wave_Boss
   m_TagString: EnermyBullet
@@ -68,10 +68,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0046840906}
+  m_Offset: {x: 0, y: 0.003955126}
   serializedVersion: 2
-  m_Radius: 0.32668555
---- !u!114 &8424398076717742856
+  m_Radius: 0.18834043
+--- !u!114 &-7490340072911690994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,14 +80,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8424398076717742871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c931aa5056d60a4d8092450fa4a485a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7420abb78a615964592c0e80effd0b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  damage: 5
+  speed: 1.5
+  damage: 0
   Target: {fileID: 0}
-  RotSpeed: 500
+  RotSpeed: 180
   isMoveToTarget: 0
+  Image: {fileID: 8424398078366345266}
+  isSpriteRot: 1
 --- !u!1 &8424398078366345266
 GameObject:
   m_ObjectHideFlags: 0

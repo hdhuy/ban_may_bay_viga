@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] 
-    private LevelTable levelTable;
+    public LevelTable levelTable;
 
     private int currentEnemyDestroy;
 
@@ -23,7 +22,6 @@ public class LevelManager : MonoBehaviour
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
             }
-            
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
         }
     }
@@ -45,13 +43,14 @@ public class LevelManager : MonoBehaviour
                 case EnermyType.HighEnermy:
                     enemy = ObjectPutter.getInstance.PutObject(SpawnerType.HighEnermy, ObjectType.Enermy);
                     break;
-                case EnermyType.Boss:
-                    enemy = ObjectPutter.getInstance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
-                    break;
             }
+
             EnermyMove em = enemy.GetComponent<EnermyMove>();
-            em.Init(orbit.mainPath, orbit.additionPath, orbit.isRotateToPath);
-            //baseEnemy.OnEnemyDestroy += OnEnemyDestroyInWave;
+            em.Init(orbit.mainPath,orbit.isRotateToPath);
+
+            EnermyHealth eh = enemy.GetComponent<EnermyHealth>();
+            eh.OnEnemyDestroy += OnEnemyDestroyInWave;
+            em.OnEnemyDestroy += OnEnemyDestroyInWave;
             yield return new WaitForSeconds(orbit.timeDelay);
         }
     }
@@ -60,5 +59,5 @@ public class LevelManager : MonoBehaviour
     {
         currentEnemyDestroy++;
     }
-    
+
 }

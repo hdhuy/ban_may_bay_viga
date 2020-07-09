@@ -183,6 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  damage: 5
-  MaxScale: 2
-  ChangePerFrame: 0.005
+  damage: 0
+  MaxScale: 1.2
+  ChangePerFrame: 0.003

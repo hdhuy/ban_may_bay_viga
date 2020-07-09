@@ -14,6 +14,7 @@ public class LevelTable : ScriptableObject
 
         public int TotalEnemy
         {
+            //tổng các các enermy trong orbit list
             get { return orbitList.Sum(x => x.enemyNum); }
         }
     }

@@ -31,7 +31,6 @@ public class PlayerHealth : Player
             Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
             exp.position = transform.position;
             HealthBar.transform.localScale = new Vector3(0, 1, 1);
-            Destroy(gameObject);
             if (GameObject.Find("UI") != null)
             {
                 GameObject a = GameObject.Find("UI");
@@ -41,6 +40,7 @@ public class PlayerHealth : Player
             {
                 Debug.Log("Không tìm thấy UI");
             }
+            Destroy(gameObject);
         }
         else
         {

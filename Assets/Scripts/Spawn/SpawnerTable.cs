@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Create SpawnerTable", fileName = "SpawnerTable")]
 public class SpawnerTable : ScriptableObject
 {
-    [SerializeField] private List<SpawnerInfo> ListBullet;
-    [SerializeField] private List<SpawnerInfo> ListEnermy;
-    [SerializeField] private List<SpawnerInfo> ListEffect;
-    [SerializeField] private List<SpawnerInfo> ListCoin;
+    public List<SpawnerInfo> ListBullet;
+    public List<SpawnerInfo> ListEnermy;
+    public List<SpawnerInfo> ListEffect;
+    public List<SpawnerInfo> ListCoin;
     public SpawnerInfo GetSpawnerInfo(SpawnerType type, ObjectType a)
     {
         switch (a)

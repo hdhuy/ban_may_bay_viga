@@ -6,7 +6,7 @@ using DG.Tweening;
 public class MediumEnermyMove : EnermyMove
 {
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         StartCoroutine(Look());
     }
