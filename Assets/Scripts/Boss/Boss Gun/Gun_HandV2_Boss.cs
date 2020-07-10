@@ -17,7 +17,7 @@ public class Gun_HandV2_Boss : BossGun
         {
             Blood -= dam;
             //hieu ung
-            Transform vfx = ObjectPutter.getInstance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
+            Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
             if (Blood <= 0)
             {

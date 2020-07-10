@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class MediumEnermyMove : EnermyMove
+public class MediumEnermyMove : BaseEnemy 
 {
     // Start is called before the first frame update
     void Start() 

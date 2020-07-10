@@ -14,7 +14,7 @@ public class Gun_Wing_Boss : BossGun
         if (Blood > 0)
         {
             yield return new WaitForSeconds(4);
-            Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Wing_Boss, ObjectType.Bullet);
+            Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Wing_Boss, ObjectType.Bullet);
             bullet1.rotation = FirePoint.rotation;
             bullet1.position = FirePoint.position;
             bullet1.GetComponent<Bullet>().Activate();

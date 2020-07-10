@@ -18,7 +18,7 @@ public class PlayerHealth : Player
             int dam = collision.gameObject.GetComponent<Bullet>().damage;
             BeHurt(dam);
             //eff
-            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
+            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
             exp.position = collision.transform.position;
             collision.gameObject.SetActive(false);
         }
@@ -26,7 +26,7 @@ public class PlayerHealth : Player
         {
             BeHurt(1000);
             //eff
-            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
+            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
             exp.position = collision.transform.position;
         }
     }
@@ -35,7 +35,7 @@ public class PlayerHealth : Player
         CurrentHealth -= dam;
         if (CurrentHealth <= 0)
         {
-            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
+            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
             exp.position = transform.position;
             HealthBar.transform.localScale = new Vector3(0, 1, 1);
             if (GameObject.Find("UI") != null)

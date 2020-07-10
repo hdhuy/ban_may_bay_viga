@@ -37,19 +37,19 @@ public class MediumEnermyAttack : MonoBehaviour
     }
     private void Shoot1()
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;
         bullet1.position = Left_2.position;//1
 
-        Transform bullet2 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet2 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet2.rotation = transform.localRotation;
         bullet2.position = Left_3.position;//2
 
-        Transform bullet3 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet3 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet3.rotation = transform.localRotation;
         bullet3.position = Right_2.position;//3
 
-        Transform bullet4 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet4 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet4.rotation = transform.localRotation;
         bullet4.position = Right_3.position;//4
 
@@ -60,23 +60,23 @@ public class MediumEnermyAttack : MonoBehaviour
     }
     private void Shoot2()
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
         bullet1.position = Mid.position;//1 
         bullet1.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-        Transform bullet2 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet2 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet2.position = Left_1.position;//2
         bullet2.rotation = Quaternion.Euler(0f, 0f, -10f);
 
-        Transform bullet3 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet3 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet3.position = Left_3.position;//3
         bullet3.rotation = Quaternion.Euler(0f, 0f, -20f);
 
-        Transform bullet4 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet4 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet4.position = Right_1.position;//4
         bullet4.rotation = Quaternion.Euler(0f, 0f, 10f);
 
-        Transform bullet5 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
+        Transform bullet5 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium, ObjectType.Bullet);
         bullet5.position = Right_3.position;//5
         bullet5.rotation = Quaternion.Euler(0f, 0f, 20f);
 

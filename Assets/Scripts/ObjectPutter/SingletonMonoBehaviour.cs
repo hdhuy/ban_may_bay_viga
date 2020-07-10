@@ -4,25 +4,25 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : SingletonMonoBe
 {
 
     //tạo mới một game obj để chứa các obj được spawn
-    protected static T Instance;
+    protected static T instance;
 
-    public static T getInstance
+    public static T Instance
     {
         get
         {
-            if (Instance == null)
+            if (instance == null)
             {
                 //tìm obj có tên là tên của class
-                Instance = (T)FindObjectOfType(typeof(T));
+                instance = (T)FindObjectOfType(typeof(T));
                 //nếu không có
-                if (Instance == null)
+                if (instance == null)
                 {
                     string name = typeof(T).Name;//tên class
                     Debug.LogFormat("Create singleton object: {0}", name);
                     //tạo game obj với tên là name
-                    Instance = new GameObject(name).AddComponent<T>();
+                    instance = new GameObject(name).AddComponent<T>();
                     //kiểm tra null
-                    if (Instance == null)
+                    if (instance == null)
                     {
                         Debug.LogWarning("Can't find singleton object: " + typeof(T).Name);
                         Debug.LogError("Can't create singleton object: " + typeof(T).Name);
@@ -31,7 +31,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : SingletonMonoBe
                 }
             }
 
-            return Instance;
+            return instance;
         }
     }
     //kiểm tra instance
@@ -42,13 +42,13 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : SingletonMonoBe
 
     protected bool CheckInstance()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = (T)this;
+            instance = (T)this;
             return true;
         }
 
-        if (getInstance == this)
+        if (Instance == this)
         {
             return true;
         }

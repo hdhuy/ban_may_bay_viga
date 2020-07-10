@@ -22,7 +22,7 @@ public class PlayerAttack : Player
     }
     private void createBullet(Transform t,ParticleSystem p,float z)
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.PlayerBullet, ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.PlayerBullet, ObjectType.Bullet);
         bullet1.position = t.position;
         bullet1.rotation = Quaternion.Euler(0f, 0f, z);
         bullet1.GetComponent<Bullet>().Activate();

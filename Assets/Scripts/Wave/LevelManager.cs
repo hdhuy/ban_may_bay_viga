@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(CreateLevel2());
+        StartCoroutine(CreateLevel());
     }
     IEnumerator setUI(string text)
     {
@@ -74,24 +74,18 @@ public class LevelManager : MonoBehaviour
     {
         for (int i = 0; i < levelTable.waveList.Count; i++)
         {
-            int w = i + 1;
-            string text = "WAVE " + w;
-            if (i == levelTable.waveList.Count - 1)
-            {
-                text = "BOSS";
-            }
-            StartCoroutine(setUI(text));
-            //
             currentEnemyDestroy = 0;
+            Debug.Log("bat dau wave: " + i);
             LevelTable.Wave wave = levelTable.waveList[i];
             for (int j = 0; j < wave.orbitList.Count; j++)
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
             }
-            Debug.Log("wait...");
+            Debug.Log("cho ...");
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
-            Debug.Log("ok...");
+            Debug.Log("xong =>");
         }
+
     }
 
     public IEnumerator SpawnEnemyOrbit(Orbit orbit)
@@ -101,13 +95,10 @@ public class LevelManager : MonoBehaviour
         {
             Transform enemy = createEnermy(orbit);
 
-            EnermyMove em = enemy.GetComponent<EnermyMove>();
-            em.Init(orbit.mainPath, orbit.additionPath, orbit.isRotateToPath);
+            BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
+            baseEnemy.Init(orbit.mainPath, orbit.additionPath, orbit.isRotateToPath);
+            baseEnemy.OnEnemyDestroy += OnEnemyDestroyInWave;
 
-            EnermyHealth eh = enemy.GetComponent<EnermyHealth>();
-
-            eh.OnEnemyDestroy += OnEnemyDestroyInWave;
-            em.OnEnemyDestroy += OnEnemyDestroyInWave;
             yield return new WaitForSeconds(orbit.timeDelay);
         }
     }
@@ -117,16 +108,16 @@ public class LevelManager : MonoBehaviour
         switch (orbit.enemyType)
         {
             case EnermyType.LowEnermy:
-                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.LowEnermy, ObjectType.Enermy);
+                enemy = ObjectPutter.Instance.PutObject(SpawnerType.LowEnermy, ObjectType.Enermy);
                 break;
             case EnermyType.MediumEnermy:
-                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.MediumEnermy, ObjectType.Enermy);
+                enemy = ObjectPutter.Instance.PutObject(SpawnerType.MediumEnermy, ObjectType.Enermy);
                 break;
             case EnermyType.HighEnermy:
-                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.HighEnermy, ObjectType.Enermy);
+                enemy = ObjectPutter.Instance.PutObject(SpawnerType.HighEnermy, ObjectType.Enermy);
                 break;
             case EnermyType.Boss:
-                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
+                enemy = ObjectPutter.Instance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
                 break;
         }
         return enemy;

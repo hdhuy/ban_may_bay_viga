@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3475693186637526975}
   - component: {fileID: 3475693186637526974}
   - component: {fileID: 3475693186637526969}
-  - component: {fileID: 3475693186637526968}
   - component: {fileID: 7581191266046156529}
-  - component: {fileID: -8034098954702799484}
+  - component: {fileID: 751066431708213856}
   m_Layer: 0
   m_Name: High Enermy
   m_TagString: Enermy
@@ -84,18 +83,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3475693186637526968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3475693186637526971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a508c997da3ccc348bce31d2b92d17ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7581191266046156529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +98,7 @@ MonoBehaviour:
   Mid: {fileID: 3475693187515820525}
   Left: {fileID: 3475693187322462362}
   Right: {fileID: 3475693187068361136}
---- !u!114 &-8034098954702799484
+--- !u!114 &751066431708213856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,12 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3475693186637526971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7d79d3ac646ea4f8243aa341884fc8, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1d0effe223c494ca80c5ad5e916cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blood: 100
-  CurrentBlood: 100
-  ExplosionType: 1
+  health: 100
+  explosionType: 1
 --- !u!1 &3475693187068361139
 GameObject:
   m_ObjectHideFlags: 0

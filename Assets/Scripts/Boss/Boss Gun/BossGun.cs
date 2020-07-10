@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class BossGun : Boss
+public class BossGun : BaseBoss
 {
     public GameObject HealthBar;
     public GameObject HealthBarParent;
@@ -27,7 +27,7 @@ public class BossGun : Boss
         {
             Blood -= dam;
             //hieu ung
-            Transform vfx = ObjectPutter.getInstance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
+            Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
             if (Blood <= 0)
             {
@@ -51,11 +51,11 @@ public class BossGun : Boss
             GameObject boss = GameObject.FindGameObjectWithTag("Boss");
             if (destroyed == 10)
             {
-                boss.GetComponent<Boss>().setLevel_2();
+                boss.GetComponent<BaseBoss>().setLevel_2();
             }
             if (destroyed == 14)
             {
-                boss.GetComponent<Boss>().setLevel_3();
+                boss.GetComponent<BaseBoss>().setLevel_3();
             }
         }
         else

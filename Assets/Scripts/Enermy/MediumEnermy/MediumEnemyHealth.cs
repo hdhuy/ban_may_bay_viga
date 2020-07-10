@@ -1,27 +1,27 @@
 ﻿using UnityEngine;
 
-public class MediumEnemyHealth : EnermyHealth
+public class MediumEnemyHealth : BaseEnemy
 {
     public Transform healthBar;
 
     public Transform currentHealthBar;
-    public override void SpawnCoin()
+    protected override void SpawnCoin()
     {
-        createCoin(SpawnerType.CoinNormal,new Vector2(15,0));
-        createCoin(SpawnerType.CoinNormal,new Vector2(-15, 0));
-        createCoin(SpawnerType.CoinHigh,new Vector2(0, 5));
+        createCoin(SpawnerType.CoinNormal, new Vector2(15, 0));
+        createCoin(SpawnerType.CoinNormal, new Vector2(-15, 0));
+        createCoin(SpawnerType.CoinHigh, new Vector2(0, 5));
     }
-    public override void BeHurt(int bulletDamage)
+    public override void DecreaHealth(int bulletDamage)
     {
         if (!healthBar.gameObject.activeSelf)
         {
             healthBar.gameObject.SetActive(true);
             currentHealthBar.localScale = Vector3.one;
         }
-        base.BeHurt(bulletDamage);
-        if (CurrentBlood > 0)
+        base.DecreaHealth(bulletDamage);
+        if (currentHealth > 0)
         {
-            currentHealthBar.localScale = new Vector3(CurrentBlood *0.01f, 1f, 1f);
+            currentHealthBar.localScale = new Vector3(currentHealth * 0.01f, 1f, 1f);
         }
     }
 

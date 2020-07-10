@@ -27,14 +27,14 @@ public class HighEnermyAttack : MonoBehaviour
     }
     private void Shoot1(Transform t)
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Medium,ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;
         bullet1.position = t.position;//1
         bullet1.GetComponent<Bullet>().Activate();
     }
     private void ShootRocket()
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Rocket_High, ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Rocket_High, ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;
         bullet1.position = Mid.position;//1
         bullet1.GetComponent<Bullet>().Activate();

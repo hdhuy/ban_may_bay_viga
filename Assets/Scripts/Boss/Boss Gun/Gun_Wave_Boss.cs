@@ -70,7 +70,7 @@ public class Gun_Wave_Boss : BossGun
         {
             Blood -= dam;
             //hieu ung
-            Transform vfx = ObjectPutter.getInstance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
+            Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
             if (Blood <= 0)
             {
@@ -115,7 +115,7 @@ public class Gun_Wave_Boss : BossGun
     }
     private void ShootRocket()
     {
-        Transform bullet1 = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet2_Wave_Boss,ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet2_Wave_Boss,ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;
         bullet1.position = FirePoint.position;//1
         bullet1.GetComponent<Rigidbody2D>().velocity = transform.up * 5;
@@ -127,7 +127,7 @@ public class Gun_Wave_Boss : BossGun
         {
             try
             {
-                Transform a = ObjectPutter.getInstance.PutObject(SpawnerType.Bullet_Wave_Boss, ObjectType.Bullet);
+                Transform a = ObjectPutter.Instance.PutObject(SpawnerType.Bullet_Wave_Boss, ObjectType.Bullet);
                 a.position = FirePoint.position;
                 a.rotation = FirePoint.rotation;
                 a.GetComponent<Bullet>().Activate();

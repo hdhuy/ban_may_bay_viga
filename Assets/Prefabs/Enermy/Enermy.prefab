@@ -94,8 +94,7 @@ GameObject:
   - component: {fileID: 7843119860463813171}
   - component: {fileID: 7843119860463813168}
   - component: {fileID: 9989440172113267}
-  - component: {fileID: 3818339712272503114}
-  - component: {fileID: -2119432453145455375}
+  - component: {fileID: 5995929344297518844}
   m_Layer: 0
   m_Name: Enermy
   m_TagString: Enermy
@@ -181,7 +180,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25309312, y: 0.3393891}
   m_EdgeRadius: 0
---- !u!114 &3818339712272503114
+--- !u!114 &5995929344297518844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,25 +189,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7843119860463813172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a508c997da3ccc348bce31d2b92d17ed, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1d0effe223c494ca80c5ad5e916cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDestroyWhenEnd: 1
---- !u!114 &-2119432453145455375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843119860463813172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7d79d3ac646ea4f8243aa341884fc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Blood: 0
-  CurrentBlood: 0
-  ExplosionType: 0
+  health: 100
+  explosionType: 0
 --- !u!1001 &7843119859460500066
 PrefabInstance:
   m_ObjectHideFlags: 0

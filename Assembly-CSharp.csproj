@@ -76,13 +76,13 @@
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
     <Compile Include="Assets\Scripts\Background\RepeatingBackground.cs" />
     <Compile Include="Assets\Scripts\Background\ScrollingObject.cs" />
+    <Compile Include="Assets\Scripts\Boss\BaseBoss.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\BossGun.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\Gun_Fire_Boss.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\Gun_HandV2_Boss.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\Gun_Mini_Boss.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\Gun_Wave_Boss.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss Gun\Gun_Wing_Boss.cs" />
-    <Compile Include="Assets\Scripts\Boss\Boss.cs" />
     <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Bullet\Boundary.cs" />
     <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
@@ -94,9 +94,8 @@
     <Compile Include="Assets\Scripts\Bullet\BulletWingBoss.cs" />
     <Compile Include="Assets\Scripts\Bullet\Rocket.cs" />
     <Compile Include="Assets\Scripts\Coin\Coin.cs" />
-    <Compile Include="Assets\Scripts\Enermy\Enermy.cs" />
-    <Compile Include="Assets\Scripts\Enermy\EnermyHealth.cs" />
-    <Compile Include="Assets\Scripts\Enermy\EnermyMove.cs" />
+    <Compile Include="Assets\Scripts\Enermy\BaseEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enermy\HealthManager.cs" />
     <Compile Include="Assets\Scripts\Enermy\HighEnermy\HighEnermyAttack.cs" />
     <Compile Include="Assets\Scripts\Enermy\MediumEnermy\MediumEnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enermy\MediumEnermy\MediumEnermyAttack.cs" />
