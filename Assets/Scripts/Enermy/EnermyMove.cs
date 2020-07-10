@@ -6,16 +6,17 @@ public class EnermyMove : Enermy
 {
     private DOTweenPath mainPath;
 
+    private DOTweenPath additionPath;
+
     private bool isRotateToPath;
 
-    public void Init(DOTweenPath _mainPath, bool _isRotateToPath)
+    public void Init(DOTweenPath _mainPath, DOTweenPath _additionPath, bool _isRotateToPath)
     {
         mainPath = _mainPath;
-        //additionPath = _additionPath;
+        additionPath = _additionPath;
         transform.position = mainPath.wps[0];
         isRotateToPath = _isRotateToPath;
-        //gameObject.AddComponent< DOTweenPath>();
-       StartMove();
+        StartMove();
     }
 
     public virtual void StartMove()
@@ -31,7 +32,14 @@ public class EnermyMove : Enermy
                 .SetEase(mainPath.easeCurve)
                 .onComplete += delegate
                 {
-                    DeActivate();
+                    if (!additionPath)
+                    {
+                        DeActivate();
+                    }
+                    else
+                    {
+                        ContinueAdditionPath();
+                    }
                 };
         }
         else
@@ -44,7 +52,14 @@ public class EnermyMove : Enermy
                 .SetEase(mainPath.easeCurve)
                 .onComplete += delegate
                 {
-                    DeActivate();
+                    if (!additionPath)
+                    {
+                        DeActivate();
+                    }
+                    else
+                    {
+                        ContinueAdditionPath();
+                    }
                 };
         }
 
@@ -52,13 +67,13 @@ public class EnermyMove : Enermy
 
     protected void ContinueAdditionPath()
     {
-        //transform.DOPath(additionPath.wps.ToArray(), additionPath.duration, additionPath.pathType, PathMode.TopDown2D,
-        //        additionPath.pathResolution)
-        //    .SetOptions(additionPath.isClosedPath)
-        //    .SetDelay(additionPath.delay)
-        //    .SetLoops(additionPath.loops, additionPath.loopType)
-        //    .SetSpeedBased(additionPath.isSpeedBased)
-        //    .SetEase(additionPath.easeCurve);
+        transform.DOPath(additionPath.wps.ToArray(), additionPath.duration, additionPath.pathType, PathMode.TopDown2D,
+                additionPath.pathResolution)
+            .SetOptions(additionPath.isClosedPath)
+            .SetDelay(additionPath.delay)
+            .SetLoops(additionPath.loops, additionPath.loopType)
+            .SetSpeedBased(additionPath.isSpeedBased)
+            .SetEase(additionPath.easeCurve);
     }
 
 }

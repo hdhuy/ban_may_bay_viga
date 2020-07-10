@@ -33,21 +33,23 @@ public class LevelManager : MonoBehaviour
     {
         for (int i = 0; i < levelTable.waveList.Count; i++)
         {
+            int w = i + 1;
+            string text = "WAVE " + w;
+            if (i == levelTable.waveList.Count - 1)
+            {
+                text = "BOSS";
+            }
+            StartCoroutine(setUI(text));
+            //
             currentEnemyDestroy = 0;
             LevelTable.Wave wave = levelTable.waveList[i];
             for (int j = 0; j < wave.orbitList.Count; j++)
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
-                Debug.Log("xong wave " + 1);
             }
+
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
-            int w = i + 1;
-            string text = "WAVE " + w;
-            if(i== levelTable.waveList.Count - 1)
-            {
-                text = "BOSS";
-            }
-            StartCoroutine(setUI(text));
+
         }
     }
 
@@ -72,13 +74,8 @@ public class LevelManager : MonoBehaviour
                     enemy = ObjectPutter.getInstance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
                     break;
             }
-            Debug.Log("kiem tra orbit"+orbit.enemyNum);
             EnermyMove em = enemy.GetComponent<EnermyMove>();
-            em.Init(orbit.mainPath,orbit.isRotateToPath);
-            if (enemy.GetComponent<EnermyHealth>() != null)
-            {
-                Debug.Log("health null");
-            }
+            em.Init(orbit.mainPath, orbit.additionPath, orbit.isRotateToPath);
             EnermyHealth eh = enemy.GetComponent<EnermyHealth>();
             eh.OnEnemyDestroy += OnEnemyDestroyInWave;
             em.OnEnemyDestroy += OnEnemyDestroyInWave;

@@ -27,7 +27,6 @@ public class MediumEnermyMove : EnermyMove
                     z = -20;
                 }
             }
-            Debug.Log(z);
             transform.DORotate(new Vector3(0, 0, z), 1);
             yield return new WaitForSeconds(1);
             StartCoroutine(Look());

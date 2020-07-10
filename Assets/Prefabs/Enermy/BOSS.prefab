@@ -3799,6 +3799,7 @@ GameObject:
   - component: {fileID: 2611212019454296114}
   - component: {fileID: 2611212019454296098}
   - component: {fileID: 2611212019454296099}
+  - component: {fileID: 722443738844969474}
   - component: {fileID: 2611212019454296097}
   - component: {fileID: 2611212019454296096}
   - component: {fileID: 2611212019454296102}
@@ -3883,6 +3884,18 @@ MonoBehaviour:
   ExplosionType: 1
   CurrentHealbar: {fileID: 283125341814218779}
   isProtected: 1
+--- !u!114 &722443738844969474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611212019454296124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a508c997da3ccc348bce31d2b92d17ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &2611212019454296097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6491,15 +6504,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7497fbe760f7846a2fefca1952e550, type: 3}
---- !u!198 &883770424407186602 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1129863075274256845, guid: ed7497fbe760f7846a2fefca1952e550,
-    type: 3}
-  m_PrefabInstance: {fileID: 283125342846332263}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7822690619944134373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8026007533162908546, guid: ed7497fbe760f7846a2fefca1952e550,
+    type: 3}
+  m_PrefabInstance: {fileID: 283125342846332263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &883770424407186602 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1129863075274256845, guid: ed7497fbe760f7846a2fefca1952e550,
     type: 3}
   m_PrefabInstance: {fileID: 283125342846332263}
   m_PrefabAsset: {fileID: 0}
