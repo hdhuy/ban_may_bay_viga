@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerEarn : Player
 {
+    public Text coinText;
+    private void Start()
+    {
+        int coin = PlayerPrefs.GetInt("coin");
+        coinText.text = coin.ToString();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Coin"))
@@ -12,6 +18,7 @@ public class PlayerEarn : Player
             int currentCoin = PlayerPrefs.GetInt("coin");
             int newcoin = value + currentCoin;
             PlayerPrefs.SetInt("coin", newcoin);
+            coinText.text = newcoin.ToString();
             collision.gameObject.SetActive(false);
         }
     }

@@ -11,7 +11,6 @@ public class LevelTable : ScriptableObject
     {
         [SerializeField]
         public List<Orbit> orbitList;
-
         public int TotalEnemy
         {
             //tổng các các enermy trong orbit list

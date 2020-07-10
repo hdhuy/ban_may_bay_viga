@@ -7,7 +7,7 @@ public class ObjectPutter : SingletonMonoBehaviour<ObjectPutter>
 
     private Dictionary<SpawnerType, Spawner> spawnerDict = new Dictionary<SpawnerType, Spawner>();
 
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         //nếu không có prefabs thì tim trong folders

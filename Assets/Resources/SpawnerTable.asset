@@ -58,7 +58,7 @@ MonoBehaviour:
       type: 3}
   - Name: boss
     type: 17
-    prefab: {fileID: 6720538157419241458, guid: 09891e4a281b6844e960e120d9ddfcee,
+    prefab: {fileID: 2611212019454296124, guid: 12684111ce684c14a974470e08ee2a63,
       type: 3}
   ListEffect:
   - Name: vfx spark

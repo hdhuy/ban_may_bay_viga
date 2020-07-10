@@ -14,7 +14,8 @@ public class EnermyMove : Enermy
         //additionPath = _additionPath;
         transform.position = mainPath.wps[0];
         isRotateToPath = _isRotateToPath;
-        StartMove();
+        //gameObject.AddComponent< DOTweenPath>();
+       StartMove();
     }
 
     public virtual void StartMove()

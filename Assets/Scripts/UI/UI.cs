@@ -7,18 +7,7 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     public GameObject panel;
-    public Text CoinText;
-    private void Update()
-    {
-        //updateCoin();
-    }
-    public void updateCoin()
-    {
-        //int coin = PlayerPrefs.GetInt("coin");
-        //string coinstr = coin + "";
-        //CoinText.text = coinstr;
-        CoinText.text = "xxx";
-    }
+    
     public void loadThisScene()
     {
         SceneManager.LoadScene(0);

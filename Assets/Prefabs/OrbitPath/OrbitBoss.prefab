@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3187727377639153004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 1.67, z: 0}
+  m_LocalPosition: {x: 1.75, y: 13.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,34 +113,38 @@ MonoBehaviour:
   isLocal: 0
   isClosedPath: 0
   pathResolution: 10
-  pathMode: 1
+  pathMode: 2
   lockRotation: 0
   assignForwardAndUp: 0
   forwardDirection: {x: 0, y: 0, z: 1}
   upDirection: {x: 0, y: 1, z: 0}
   tweenRigidbody: 0
   wps:
-  - {x: 1.9320587, y: 1.6731236, z: 0}
-  - {x: -1.9320595, y: 1.6930416, z: 0}
+  - {x: -2.2114525, y: 3.4489155, z: 0}
+  - {x: 1.7886481, y: -0.08274889, z: 0}
+  - {x: 5.496495, y: 3.2133362, z: 0}
   fullWps: []
   path:
     wpLengths:
     - 0
-    - 0.032210533
-    - 3.8641694
+    - 10.952596
+    - 5.336053
+    - 4.961079
     type: 0
     subdivisionsXSegment: 10
-    subdivisions: 30
+    subdivisions: 40
     wps:
-    - {x: 1.9, y: 1.67, z: 0}
-    - {x: 1.9320587, y: 1.6731236, z: 0}
-    - {x: -1.9320595, y: 1.6930416, z: 0}
+    - {x: 1.75, y: 13.66, z: 0}
+    - {x: -2.2114525, y: 3.4489155, z: 0}
+    - {x: 1.7886481, y: -0.08274889, z: 0}
+    - {x: 5.496495, y: 3.2133362, z: 0}
     controlPoints: []
-    length: 3.89638
+    length: 21.249727
     isFinalized: 1
     timesTable:
     - 0
-    - 0.008266784
+    - 0.5154229
+    - 0.7665345
     - 1
     lengthsTable: []
   inspectorMode: 0
@@ -152,6 +156,6 @@ MonoBehaviour:
   showIndexes: 1
   showWpLength: 0
   pathColor: {r: 1, g: 1, b: 1, a: 0.5}
-  lastSrcPosition: {x: 1.9, y: 1.67, z: 0}
+  lastSrcPosition: {x: 1.75, y: 13.66, z: 0}
   wpsDropdown: 1
   dropToFloorOffset: 0

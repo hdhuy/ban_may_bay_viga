@@ -9,6 +9,7 @@ public class Gun_HandV2_Boss : BossGun
     private void Start()
     {
         StartCoroutine(FirstWait());
+        //StartCoroutine(FirePlay());
     }
     protected override void enterBullet(int dam)
     {
@@ -40,9 +41,10 @@ public class Gun_HandV2_Boss : BossGun
     }
     IEnumerator FirePlay()
     {
+        Fire.Play();
+        yield return new WaitForSeconds(3);
         Fire.Stop();
         yield return new WaitForSeconds(3);
-        Fire.Play();
         if (isDead==false)
         {
             StartCoroutine(FirePlay());

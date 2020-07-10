@@ -18,9 +18,13 @@ public class Gun_Wave_Boss : BossGun
     {
         if (ReadyToRotate())
         {
-            Debug.Log(transform.name+"---"+ transform.eulerAngles.z);
-            transform.rotation = RotToPlayer();
+            Quaternion q = RotToPlayer();
+            if (q.eulerAngles.z > limit_1 && q.eulerAngles.z < limit_2)
+            {
+                transform.rotation = q;
+            }
         }
+        Reset();
     }
     private Quaternion RotToPlayer()
     {
@@ -49,20 +53,15 @@ public class Gun_Wave_Boss : BossGun
             return false;
         }
     }
-    IEnumerator Reset()
+    private void Reset()
     {
-        yield return new WaitForSeconds(5);
-        if (destroyed == 10)
+        if (destroyed == 10&&isDead==true)
         {
             Blood = 100;
             isDead = false;
             HealthBarParent.SetActive(true);
             HealthBar.transform.localScale = new Vector3(1, 1, 1);
             StartCoroutine(Shoot2());
-        }
-        else
-        {
-            StartCoroutine(Reset());
         }
     }
     protected override void enterBullet(int dam)
@@ -78,9 +77,8 @@ public class Gun_Wave_Boss : BossGun
                 destroyed++;
                 HealthBarParent.SetActive(false);
                 checkBossLevel();
-                Debug.Log(destroyed);
+                //Debug.Log(destroyed);
                 isDead = true;
-                StartCoroutine(Reset());
             }
             else
             {
@@ -111,9 +109,12 @@ public class Gun_Wave_Boss : BossGun
     }
     IEnumerator Shoot2()
     {
-        ShootRocket();
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(Shoot2());
+        if (Blood > 0)
+        {
+            ShootRocket();
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(Shoot2());
+        }
     }
     private void ShootRocket()
     {
