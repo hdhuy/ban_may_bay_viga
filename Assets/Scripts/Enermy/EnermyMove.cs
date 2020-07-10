@@ -43,7 +43,6 @@ public class EnermyMove : Enermy
                     if (!additionPath)
                     {
                         DeActivate();
-                        Reset();
                     }
                     else
                     {
@@ -64,7 +63,6 @@ public class EnermyMove : Enermy
                     if (additionPath!=null)
                     {
                         DeActivate();
-                        Reset();
                     }
                     else
                     {

@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  damage: 0
+  damage: 5
   Target: {fileID: 0}
   RotSpeed: 180
   isMoveToTarget: 0
