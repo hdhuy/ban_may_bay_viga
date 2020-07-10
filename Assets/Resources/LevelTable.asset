@@ -30,14 +30,6 @@ MonoBehaviour:
       mainPath: {fileID: 6663400309764260989, guid: 4994ffd8bd61b3742829c17376c8fda9,
         type: 3}
       additionPath: {fileID: 0}
-    - timeStart: 6
-      timeDelay: 0.4
-      enemyType: 0
-      enemyNum: 10
-      isRotateToPath: 1
-      mainPath: {fileID: 3720304788317925483, guid: 0e05fd501f3d83f4c964ab71573a2912,
-        type: 3}
-      additionPath: {fileID: 0}
   - orbitList:
     - timeStart: 2
       timeDelay: 0.4
@@ -46,8 +38,7 @@ MonoBehaviour:
       isRotateToPath: 0
       mainPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
         type: 3}
-      additionPath: {fileID: 4242404509391464559, guid: 4f05f7a4c3c62384eae85b41a7421990,
-        type: 3}
+      additionPath: {fileID: 0}
   - orbitList:
     - timeStart: 2
       timeDelay: 0
@@ -56,8 +47,7 @@ MonoBehaviour:
       isRotateToPath: 0
       mainPath: {fileID: 4242404509391464559, guid: 4f05f7a4c3c62384eae85b41a7421990,
         type: 3}
-      additionPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
-        type: 3}
+      additionPath: {fileID: 0}
   - orbitList:
     - timeStart: 2
       timeDelay: 0.4

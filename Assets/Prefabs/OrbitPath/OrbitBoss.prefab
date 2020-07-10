@@ -74,7 +74,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
-  duration: 15
+  duration: 10
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -120,27 +120,27 @@ MonoBehaviour:
   upDirection: {x: 0, y: 1, z: 0}
   tweenRigidbody: 0
   wps:
-  - {x: -1.4382844, y: 3.4489164, z: 0}
-  - {x: 1.7479029, y: 3.4220138, z: 0}
+  - {x: -2.3218937, y: 2.1235037, z: 0}
+  - {x: 2.1528902, y: 2.0597835, z: 0}
   fullWps: []
   path:
     wpLengths:
     - 0
-    - 2.5899
-    - 3.1863008
+    - 12.234013
+    - 4.4752374
     type: 0
     subdivisionsXSegment: 10
     subdivisions: 30
     wps:
-    - {x: 0.13, y: 5.51, z: 0}
-    - {x: -1.4382844, y: 3.4489164, z: 0}
-    - {x: 1.7479029, y: 3.4220138, z: 0}
+    - {x: 1.75, y: 13.66, z: 0}
+    - {x: -2.3218937, y: 2.1235037, z: 0}
+    - {x: 2.1528902, y: 2.0597835, z: 0}
     controlPoints: []
-    length: 5.776201
+    length: 16.70925
     isFinalized: 1
     timesTable:
     - 0
-    - 0.4483743
+    - 0.7321701
     - 1
     lengthsTable: []
   inspectorMode: 0
@@ -152,6 +152,6 @@ MonoBehaviour:
   showIndexes: 1
   showWpLength: 0
   pathColor: {r: 1, g: 1, b: 1, a: 0.5}
-  lastSrcPosition: {x: 0.13, y: 5.51, z: 0}
+  lastSrcPosition: {x: 1.75, y: 13.66, z: 0}
   wpsDropdown: 1
   dropToFloorOffset: 0

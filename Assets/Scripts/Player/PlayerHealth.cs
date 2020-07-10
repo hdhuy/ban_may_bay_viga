@@ -22,6 +22,13 @@ public class PlayerHealth : Player
             exp.position = collision.transform.position;
             collision.gameObject.SetActive(false);
         }
+        if (collision.CompareTag("Enermy")|| collision.CompareTag("Boss"))
+        {
+            BeHurt(1000);
+            //eff
+            Transform exp = ObjectPutter.getInstance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
+            exp.position = collision.transform.position;
+        }
     }
     private void BeHurt(int dam)
     {

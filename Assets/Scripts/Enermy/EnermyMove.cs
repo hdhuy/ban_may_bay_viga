@@ -9,7 +9,15 @@ public class EnermyMove : Enermy
     private DOTweenPath additionPath;
 
     private bool isRotateToPath;
-
+    private void Start()
+    {
+        Reset();
+    }
+    public override void Reset()
+    {
+        mainPath = null;
+        additionPath = null;
+    }
     public void Init(DOTweenPath _mainPath, DOTweenPath _additionPath, bool _isRotateToPath)
     {
         mainPath = _mainPath;
@@ -35,6 +43,7 @@ public class EnermyMove : Enermy
                     if (!additionPath)
                     {
                         DeActivate();
+                        Reset();
                     }
                     else
                     {
@@ -52,9 +61,10 @@ public class EnermyMove : Enermy
                 .SetEase(mainPath.easeCurve)
                 .onComplete += delegate
                 {
-                    if (!additionPath)
+                    if (additionPath!=null)
                     {
                         DeActivate();
+                        Reset();
                     }
                     else
                     {

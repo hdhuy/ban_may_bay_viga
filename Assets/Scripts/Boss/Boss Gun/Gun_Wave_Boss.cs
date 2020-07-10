@@ -99,12 +99,9 @@ public class Gun_Wave_Boss : BossGun
         createBullet();
         rotToPlayer = true;
         yield return new WaitForSeconds(5f);
-        if (destroyed < 10)
+        if (destroyed < 10&& Blood > 0)
         {
-            if (Blood > 0)
-            {
-                StartCoroutine(Shoot());
-            }
+            StartCoroutine(Shoot());
         }
     }
     IEnumerator Shoot2()

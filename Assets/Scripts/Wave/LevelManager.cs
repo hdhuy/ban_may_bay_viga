@@ -6,11 +6,12 @@ public class LevelManager : MonoBehaviour
 {
     public LevelTable levelTable;
     public Text messText;
+    public GameObject EndPanel;
     private int currentEnemyDestroy;
 
     private void Start()
     {
-        StartCoroutine(CreateLevel());
+        StartCoroutine(CreateLevel2());
     }
     IEnumerator setUI(string text)
     {
@@ -28,6 +29,46 @@ public class LevelManager : MonoBehaviour
         messText.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         messText.gameObject.SetActive(false);
+    }
+    public int levelIndex=0;
+    IEnumerator CreateLevel2()
+    {
+        yield return new WaitForSeconds(2);
+        if (GameObject.FindGameObjectsWithTag("Enermy").Length == 0&& GameObject.FindGameObjectsWithTag("Boss").Length == 0)
+        {
+            int le = levelIndex + 1;
+            string text = "WAVE " + le;
+            if (levelIndex == levelTable.waveList.Count - 1)
+            {
+                text = "BOSS";
+            }
+            if (levelIndex == levelTable.waveList.Count)
+            {
+                text = "WIN";
+                StartCoroutine(setUI(text));
+                EndPanel.SetActive(true);
+            }
+            else
+            {
+                StartCoroutine(setUI(text));
+                //
+                LevelTable.Wave wave = levelTable.waveList[levelIndex];
+                for (int j = 0; j < wave.orbitList.Count; j++)
+                {
+                    StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
+                }
+                levelIndex++;
+            }
+        }
+        else
+        {
+            Debug.Log("count: " + GameObject.FindGameObjectsWithTag("Enermy").Length);
+        }
+        if(levelIndex < levelTable.waveList.Count)
+        {
+            StartCoroutine(CreateLevel2());
+        }
+        
     }
     public IEnumerator CreateLevel()
     {
@@ -47,9 +88,9 @@ public class LevelManager : MonoBehaviour
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
             }
-
+            Debug.Log("wait...");
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
-
+            Debug.Log("ok...");
         }
     }
 
@@ -58,31 +99,38 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(orbit.timeStart);
         for (int i = 0; i < orbit.enemyNum; i++)
         {
-            Transform enemy = null;
-            switch (orbit.enemyType)
-            {
-                case EnermyType.LowEnermy:
-                    enemy = ObjectPutter.getInstance.PutObject(SpawnerType.LowEnermy,ObjectType.Enermy);
-                    break;
-                case EnermyType.MediumEnermy:
-                    enemy = ObjectPutter.getInstance.PutObject(SpawnerType.MediumEnermy, ObjectType.Enermy);
-                    break;
-                case EnermyType.HighEnermy:
-                    enemy = ObjectPutter.getInstance.PutObject(SpawnerType.HighEnermy, ObjectType.Enermy);
-                    break;
-                case EnermyType.Boss:
-                    enemy = ObjectPutter.getInstance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
-                    break;
-            }
+            Transform enemy = createEnermy(orbit);
+
             EnermyMove em = enemy.GetComponent<EnermyMove>();
             em.Init(orbit.mainPath, orbit.additionPath, orbit.isRotateToPath);
+
             EnermyHealth eh = enemy.GetComponent<EnermyHealth>();
+
             eh.OnEnemyDestroy += OnEnemyDestroyInWave;
             em.OnEnemyDestroy += OnEnemyDestroyInWave;
             yield return new WaitForSeconds(orbit.timeDelay);
         }
     }
-
+    private Transform createEnermy(Orbit orbit)
+    {
+        Transform enemy = null;
+        switch (orbit.enemyType)
+        {
+            case EnermyType.LowEnermy:
+                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.LowEnermy, ObjectType.Enermy);
+                break;
+            case EnermyType.MediumEnermy:
+                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.MediumEnermy, ObjectType.Enermy);
+                break;
+            case EnermyType.HighEnermy:
+                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.HighEnermy, ObjectType.Enermy);
+                break;
+            case EnermyType.Boss:
+                enemy = ObjectPutter.getInstance.PutObject(SpawnerType.Boss, ObjectType.Enermy);
+                break;
+        }
+        return enemy;
+    }
     private void OnEnemyDestroyInWave()
     {
         currentEnemyDestroy++;
