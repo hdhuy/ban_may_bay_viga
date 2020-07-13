@@ -43,46 +43,56 @@ MonoBehaviour:
     type: 7
     prefab: {fileID: 8424398076717742871, guid: 26a84b34f878cf045ad95201967c4401,
       type: 3}
+  - Name: bullet fire
+    type: 8
+    prefab: {fileID: 920832830639349411, guid: 7e21393ae89f7974698a071b16c470a8, type: 3}
   ListEnermy:
   - Name: low enermy
-    type: 8
+    type: 10
     prefab: {fileID: 7843119860463813172, guid: 995c939cbd31dbf48964558b19c51532,
       type: 3}
   - Name: medium enermy
-    type: 9
+    type: 11
     prefab: {fileID: 4951937000471720884, guid: b73de3046eb80dc409658ebcad6f7803,
       type: 3}
   - Name: high enermy
-    type: 10
+    type: 12
     prefab: {fileID: 3475693186637526971, guid: 4e8bacb7dd9a4bc4b8de4f6a83a4d622,
       type: 3}
-  - Name: boss
-    type: 17
-    prefab: {fileID: 6786770115768941282, guid: 95ee34209f03de24f884a239e1d3888b,
+  - Name: small enermy
+    type: 9
+    prefab: {fileID: 3778956284410527236, guid: 2119e44a58639054590a070115e3e515,
       type: 3}
+  - Name: boss
+    type: 20
+    prefab: {fileID: 461725999536193814, guid: abf709e0cef18444f9518696f4000dae, type: 3}
   ListEffect:
   - Name: vfx spark
-    type: 11
+    type: 13
     prefab: {fileID: 1790001722138348291, guid: 6192f1a2765246038effceecc6188f88,
       type: 3}
   - Name: small explosion
-    type: 12
+    type: 14
     prefab: {fileID: 1790001722138347868, guid: a144ddec0a1d49feb0215c078710bc7f,
       type: 3}
   - Name: medium explosion
-    type: 13
+    type: 15
     prefab: {fileID: 1790001722138348062, guid: 59f430ddf8344b49984ebba327f9537b,
       type: 3}
   - Name: player explosion
-    type: 14
+    type: 16
     prefab: {fileID: 1790001722138348062, guid: 59f430ddf8344b49984ebba327f9537b,
+      type: 3}
+  - Name: smoke
+    type: 17
+    prefab: {fileID: 7997142809411057657, guid: d275c33a7d6634b479fafb6e16e79ee6,
       type: 3}
   ListCoin:
   - Name: coin normal
-    type: 15
+    type: 18
     prefab: {fileID: 3096861034218901560, guid: 90eaaee74f14b274fb9eceac3313d917,
       type: 3}
   - Name: coin high
-    type: 16
+    type: 19
     prefab: {fileID: 3085556349696369925, guid: 15c81faa1c40c3f49a00f737eac44fbe,
       type: 3}

@@ -16,16 +16,16 @@ MonoBehaviour:
   - orbitList:
     - timeStart: 1
       timeDelay: 0.4
-      enemyType: 0
-      enemyNum: 5
+      enemyType: 1
+      enemyNum: 13
       isRotateToPath: 1
       mainPath: {fileID: 2634588573182194561, guid: b0118be7b5400644e98a840dc7d4a97c,
         type: 3}
       additionPath: {fileID: 0}
-    - timeStart: 2
-      timeDelay: 0.5
-      enemyType: 0
-      enemyNum: 5
+    - timeStart: 0
+      timeDelay: 0.4
+      enemyType: 1
+      enemyNum: 13
       isRotateToPath: 1
       mainPath: {fileID: 6663400309764260989, guid: 4994ffd8bd61b3742829c17376c8fda9,
         type: 3}
@@ -33,19 +33,29 @@ MonoBehaviour:
   - orbitList:
     - timeStart: 2
       timeDelay: 0.4
-      enemyType: 1
-      enemyNum: 1
-      isRotateToPath: 0
-      mainPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
-        type: 3}
-      additionPath: {fileID: 0}
-  - orbitList:
-    - timeStart: 2
-      timeDelay: 0
       enemyType: 2
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 4242404509391464559, guid: 4f05f7a4c3c62384eae85b41a7421990,
+      mainPath: {fileID: 5239768432973082401, guid: 1cf3109f87815a44a90b00ac3d471f7c,
+        type: 3}
+      additionPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
+        type: 3}
+    - timeStart: 6
+      timeDelay: 0.4
+      enemyType: 2
+      enemyNum: 1
+      isRotateToPath: 0
+      mainPath: {fileID: 5239768432973082401, guid: 1cf3109f87815a44a90b00ac3d471f7c,
+        type: 3}
+      additionPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
+        type: 3}
+  - orbitList:
+    - timeStart: 2
+      timeDelay: 0.5
+      enemyType: 0
+      enemyNum: 15
+      isRotateToPath: 1
+      mainPath: {fileID: 3669260428996763416, guid: b525a4eeb0ea9a84bafaef821049e15c,
         type: 3}
       additionPath: {fileID: 0}
   - orbitList:
@@ -54,6 +64,26 @@ MonoBehaviour:
       enemyType: 3
       enemyNum: 1
       isRotateToPath: 0
+      mainPath: {fileID: 4790621095205206102, guid: ce7460047ce97674ea9655546c36d6f3,
+        type: 3}
+      additionPath: {fileID: 4242404509391464559, guid: 4f05f7a4c3c62384eae85b41a7421990,
+        type: 3}
+    - timeStart: 5
+      timeDelay: 0.4
+      enemyType: 3
+      enemyNum: 1
+      isRotateToPath: 0
+      mainPath: {fileID: 4790621095205206102, guid: ce7460047ce97674ea9655546c36d6f3,
+        type: 3}
+      additionPath: {fileID: 5138654819096644481, guid: b82d1124172808e4b8da55bd79e8c278,
+        type: 3}
+  - orbitList:
+    - timeStart: 2
+      timeDelay: 0.4
+      enemyType: 4
+      enemyNum: 1
+      isRotateToPath: 0
       mainPath: {fileID: 3563420737056323704, guid: 0a1b2af618e96b2409afa71fe97cc010,
         type: 3}
-      additionPath: {fileID: 0}
+      additionPath: {fileID: 5251040130643362312, guid: 4c24e825b66a40d4da56bbf55a0b7ef9,
+        type: 3}

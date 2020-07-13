@@ -31,61 +31,28 @@ public class LevelManager : MonoBehaviour
         messText.gameObject.SetActive(false);
     }
     public int levelIndex=0;
-    IEnumerator CreateLevel2()
-    {
-        yield return new WaitForSeconds(2);
-        if (GameObject.FindGameObjectsWithTag("Enermy").Length == 0&& GameObject.FindGameObjectsWithTag("Boss").Length == 0)
-        {
-            int le = levelIndex + 1;
-            string text = "WAVE " + le;
-            if (levelIndex == levelTable.waveList.Count - 1)
-            {
-                text = "BOSS";
-            }
-            if (levelIndex == levelTable.waveList.Count)
-            {
-                text = "WIN";
-                StartCoroutine(setUI(text));
-                EndPanel.SetActive(true);
-            }
-            else
-            {
-                StartCoroutine(setUI(text));
-                //
-                LevelTable.Wave wave = levelTable.waveList[levelIndex];
-                for (int j = 0; j < wave.orbitList.Count; j++)
-                {
-                    StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
-                }
-                levelIndex++;
-            }
-        }
-        else
-        {
-            Debug.Log("count: " + GameObject.FindGameObjectsWithTag("Enermy").Length);
-        }
-        if(levelIndex < levelTable.waveList.Count)
-        {
-            StartCoroutine(CreateLevel2());
-        }
-        
-    }
     public IEnumerator CreateLevel()
     {
         for (int i = 0; i < levelTable.waveList.Count; i++)
         {
             currentEnemyDestroy = 0;
-            Debug.Log("bat dau wave: " + i);
+            if(i== levelTable.waveList.Count - 1)
+            {
+                StartCoroutine(setUI("BOSS"));
+            }
+            else
+            {
+                int ii = i + 1;
+                StartCoroutine(setUI("Wave " + ii));
+            }
             LevelTable.Wave wave = levelTable.waveList[i];
             for (int j = 0; j < wave.orbitList.Count; j++)
             {
                 StartCoroutine(SpawnEnemyOrbit(wave.orbitList[j]));
             }
-            Debug.Log("cho ...");
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
-            Debug.Log("xong =>");
         }
-
+        EndPanel.SetActive(true);
     }
 
     public IEnumerator SpawnEnemyOrbit(Orbit orbit)
@@ -107,6 +74,9 @@ public class LevelManager : MonoBehaviour
         Transform enemy = null;
         switch (orbit.enemyType)
         {
+            case EnermyType.SmallEnermy:
+                enemy = ObjectPutter.Instance.PutObject(SpawnerType.SmallEnermy, ObjectType.Enermy);
+                break;
             case EnermyType.LowEnermy:
                 enemy = ObjectPutter.Instance.PutObject(SpawnerType.LowEnermy, ObjectType.Enermy);
                 break;

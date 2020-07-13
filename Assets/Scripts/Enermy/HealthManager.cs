@@ -8,7 +8,7 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     [ReadOnly(true)]
     protected int health = 100;
-
+    [SerializeField]
     protected int currentHealth;
 
     private void Awake()
@@ -19,12 +19,16 @@ public class HealthManager : MonoBehaviour
     {
         if (collision.CompareTag("PlayerBullet"))
         {
-            Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
-            vfx.position = collision.transform.position;
-            collision.gameObject.SetActive(false);
-            int dam = collision.GetComponent<Bullet>().damage;
-            DecreaHealth(dam);
+            onEnterPlayerBullet(collision);
         }
+    }
+    public virtual void onEnterPlayerBullet(Collider2D collision)
+    {
+        Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.VFXSpark, ObjectType.Effect);
+        vfx.position = collision.transform.position;
+        collision.gameObject.SetActive(false);
+        int dam = collision.GetComponent<Bullet>().damage;
+        DecreaHealth(dam);
     }
     public virtual void DecreaHealth(int bulletDamage)
     {

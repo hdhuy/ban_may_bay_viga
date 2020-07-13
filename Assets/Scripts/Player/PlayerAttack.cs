@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : Player
+public class PlayerAttack : MonoBehaviour
 {
     public float BulletSpeed;
     public List<Transform> ListFirepoint;

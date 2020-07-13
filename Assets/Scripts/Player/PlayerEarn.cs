@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerEarn : Player
+public class PlayerEarn : MonoBehaviour
 {
     public Text coinText;
     private void Start()

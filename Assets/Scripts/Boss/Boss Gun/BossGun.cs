@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEngine.XR;
 
-public class BossGun : BaseBoss
+public class BossGun : MonoBehaviour
 {
     public GameObject HealthBar;
     public GameObject HealthBarParent;
@@ -26,21 +24,33 @@ public class BossGun : BaseBoss
         if (isDead == false)
         {
             Blood -= dam;
+            if (HealthBarParent)
+            {
+                HealthBarParent.SetActive(true);
+            }
             //hieu ung
             Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
             if (Blood <= 0)
             {
                 destroyed++;
-                HealthBarParent.SetActive(false);
+                if (HealthBarParent)
+                {
+                    HealthBarParent.SetActive(false);
+                }
                 checkBossLevel();
                 Debug.Log(destroyed);
                 isDead = true;
+                Transform smoke = ObjectPutter.Instance.PutObject(SpawnerType.Smoke, ObjectType.Effect);
+                smoke.position = FirePoint.position;
             }
             else
             {
-                float scale = Blood * 0.01f;
-                HealthBar.transform.localScale = new Vector3(scale, 1, 1);
+                if (HealthBar)
+                {
+                    float scale = Blood * 0.01f;
+                    HealthBar.transform.localScale = new Vector3(scale, 1, 1);
+                }
             }
         }
     }

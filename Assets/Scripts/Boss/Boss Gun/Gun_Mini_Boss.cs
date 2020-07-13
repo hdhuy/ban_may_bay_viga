@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Gun_Mini_Boss : BossGun
 {
+    public float firstSpeed;
+    public float waitSpeed=3;
     void Start()
     {
+        StartCoroutine(firstWait());
+    }
+    IEnumerator firstWait()
+    {
+        yield return new WaitForSeconds(firstSpeed);
         StartCoroutine(Shoot());
     }
     IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(waitSpeed);
         float rang = Random.Range(1, 1.7f);
+        yield return new WaitForSeconds(rang);
+        createBullet();
         yield return new WaitForSeconds(rang);
         createBullet();
         StartCoroutine(Shoot());

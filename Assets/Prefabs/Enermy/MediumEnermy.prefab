@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641647756301229613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.159, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4951937000233530553}
@@ -161,8 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5450563038913191476, guid: 8bd33914f3a9eaf468d41e2356237c3c,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bd33914f3a9eaf468d41e2356237c3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -243,8 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2782738472612004095, guid: 8bd33914f3a9eaf468d41e2356237c3c,
-    type: 3}
+  m_Sprite: {fileID: 21300002, guid: 8bd33914f3a9eaf468d41e2356237c3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -303,7 +301,6 @@ GameObject:
   - component: {fileID: 4951937000471720905}
   - component: {fileID: -8011865122590814824}
   - component: {fileID: 1885233513776156026}
-  - component: {fileID: 2365911624941343624}
   - component: {fileID: 4951937000471720906}
   - component: {fileID: 4951937000471720885}
   - component: {fileID: 72763359538036571}
@@ -342,6 +339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c8a4200b6f9904ca658d251457dd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  currentHealth: 0
+  explosionType: 0
+  healthBar: {fileID: 2868060849128786838}
+  currentHealthBar: {fileID: 4909820956052548538}
 --- !u!114 &1885233513776156026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,23 +363,6 @@ MonoBehaviour:
   Right_1: {fileID: 1142693841964983832}
   Right_2: {fileID: 1185089641038443708}
   Right_3: {fileID: 3575757775316069442}
---- !u!114 &2365911624941343624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4951937000471720884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0604571c5eb4d5147b0fe976ddc12c35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Blood: 100
-  CurrentBlood: 100
-  ExplosionType: 1
-  healthBar: {fileID: 2868060849128786838}
-  currentHealthBar: {fileID: 4909820956052548538}
 --- !u!58 &4951937000471720906
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -609,7 +594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028085474551783832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -0.1, z: 0}
+  m_LocalPosition: {x: -0.3, y: -0.159, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4951937000233530553}

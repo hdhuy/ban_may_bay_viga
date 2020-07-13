@@ -13,7 +13,9 @@ public enum SpawnerType
     Bullet_Mini_Boss,
     Bullet_Wave_Boss,
     Bullet2_Wave_Boss,
+    Fire_Bullet,
     //Enermy
+    SmallEnermy,
     LowEnermy,
     MediumEnermy,
     HighEnermy,
@@ -22,6 +24,7 @@ public enum SpawnerType
     SmallExplosion,
     MediumExplosion,
     PlayerExplosion,
+    Smoke,
     //Coin
     CoinNormal,
     CoinHigh,

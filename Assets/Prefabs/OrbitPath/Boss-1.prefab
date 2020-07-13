@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8845760511323871111}
   - component: {fileID: 3563420737056323704}
   m_Layer: 0
-  m_Name: OrbitBoss
+  m_Name: Boss-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
-  duration: 10
+  duration: 3
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  loops: -1
+  loops: 1
   id: 
   loopType: 1
   orientType: 0
@@ -120,27 +120,31 @@ MonoBehaviour:
   upDirection: {x: 0, y: 1, z: 0}
   tweenRigidbody: 0
   wps:
-  - {x: -2.3218937, y: 2.1235037, z: 0}
-  - {x: 2.1528902, y: 2.0597835, z: 0}
+  - {x: -0.019678116, y: 6.8055916, z: 0}
+  - {x: -0.05318737, y: -0.20286107, z: 0}
+  - {x: -0.06675029, y: 2.320019, z: 0}
   fullWps: []
   path:
     wpLengths:
     - 0
-    - 12.234013
-    - 4.4752374
+    - 7.0791717
+    - 7.0085325
+    - 2.5229166
     type: 0
     subdivisionsXSegment: 10
-    subdivisions: 30
+    subdivisions: 40
     wps:
     - {x: 1.75, y: 13.66, z: 0}
-    - {x: -2.3218937, y: 2.1235037, z: 0}
-    - {x: 2.1528902, y: 2.0597835, z: 0}
+    - {x: -0.019678116, y: 6.8055916, z: 0}
+    - {x: -0.05318737, y: -0.20286107, z: 0}
+    - {x: -0.06675029, y: 2.320019, z: 0}
     controlPoints: []
-    length: 16.70925
+    length: 16.61062
     isFinalized: 1
     timesTable:
     - 0
-    - 0.7321701
+    - 0.42618346
+    - 0.84811425
     - 1
     lengthsTable: []
   inspectorMode: 0

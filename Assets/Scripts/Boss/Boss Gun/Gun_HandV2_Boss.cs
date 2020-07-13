@@ -6,9 +6,11 @@ public class Gun_HandV2_Boss : BossGun
 {
     public ParticleSystem Fire;
     public float firstwait;
+    public Transform Gun;
     private void Start()
     {
         StartCoroutine(FirstWait());
+        HealthBarParent.SetActive(false);
         //StartCoroutine(FirePlay());
     }
     protected override void enterBullet(int dam)
@@ -16,6 +18,7 @@ public class Gun_HandV2_Boss : BossGun
         if (isDead == false)
         {
             Blood -= dam;
+            HealthBarParent.SetActive(true);
             //hieu ung
             Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
@@ -23,9 +26,11 @@ public class Gun_HandV2_Boss : BossGun
             {
                 destroyed++;
                 HealthBarParent.SetActive(false);
+                HealthBar.transform.localScale = new Vector3(0, 1, 1);
                 checkBossLevel();
                 isDead = true;
-                gameObject.SetActive(false);
+                GetComponent<Animator>().enabled = false;
+                Gun.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
             }
             else
             {
@@ -42,8 +47,10 @@ public class Gun_HandV2_Boss : BossGun
     IEnumerator FirePlay()
     {
         Fire.Play();
+        Gun.GetComponent<TriggerScript>().isFire = true;
         yield return new WaitForSeconds(3);
         Fire.Stop();
+        Gun.GetComponent<TriggerScript>().isFire = false;
         yield return new WaitForSeconds(3);
         if (isDead==false)
         {

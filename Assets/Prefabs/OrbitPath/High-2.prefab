@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5290429311137514613}
   - component: {fileID: 4242404509391464559}
   m_Layer: 0
-  m_Name: OrbitHigh
+  m_Name: High-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9137365168994762098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4, y: 2.5, z: 0}
+  m_LocalPosition: {x: -2.15, y: 4.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,35 +120,47 @@ MonoBehaviour:
   upDirection: {x: 0, y: 1, z: 0}
   tweenRigidbody: 0
   wps:
-  - {x: -2.1923294, y: 2.8200796, z: 0}
-  - {x: -0.10826278, y: -0.83310235, z: 0}
-  - {x: 2.4, y: 2.5, z: 0}
-  - {x: -2.192329, y: 2.82008, z: 0}
+  - {x: -2, y: 3, z: 0}
+  - {x: -2.3601818, y: -1.2021788, z: 0}
+  - {x: 0.038823128, y: 0.14769816, z: 0}
+  - {x: 2.2861, y: -1.0270554, z: 0}
+  - {x: 1.8184562, y: 2.956513, z: 0}
+  - {x: 0.012517214, y: 3.995041, z: 0}
+  - {x: -2, y: 3, z: 0}
   fullWps: []
   path:
     wpLengths:
     - 0
-    - 4.6034703
-    - 4.2058377
-    - 4.171445
-    - 4.6034703
+    - 1.9856737
+    - 4.217587
+    - 2.7527065
+    - 2.5358033
+    - 4.0109234
+    - 2.083256
+    - 2.2450683
     type: 0
     subdivisionsXSegment: 10
-    subdivisions: 50
+    subdivisions: 80
     wps:
-    - {x: 2.4, y: 2.5, z: 0}
-    - {x: -2.1923294, y: 2.8200796, z: 0}
-    - {x: -0.10826278, y: -0.83310235, z: 0}
-    - {x: 2.4, y: 2.5, z: 0}
-    - {x: -2.192329, y: 2.82008, z: 0}
+    - {x: -2.15, y: 4.98, z: 0}
+    - {x: -2, y: 3, z: 0}
+    - {x: -2.3601818, y: -1.2021788, z: 0}
+    - {x: 0.038823128, y: 0.14769816, z: 0}
+    - {x: 2.2861, y: -1.0270554, z: 0}
+    - {x: 1.8184562, y: 2.956513, z: 0}
+    - {x: 0.012517214, y: 3.995041, z: 0}
+    - {x: -2, y: 3, z: 0}
     controlPoints: []
-    length: 17.584223
+    length: 19.831017
     isFinalized: 1
     timesTable:
     - 0
-    - 0.2617955
-    - 0.50097793
-    - 0.73820454
+    - 0.100129694
+    - 0.31280598
+    - 0.4516141
+    - 0.57948464
+    - 0.7817397
+    - 0.8867901
     - 1
     lengthsTable: []
   inspectorMode: 0
@@ -160,6 +172,6 @@ MonoBehaviour:
   showIndexes: 1
   showWpLength: 0
   pathColor: {r: 1, g: 1, b: 1, a: 0.5}
-  lastSrcPosition: {x: 2.4, y: 2.5, z: 0}
+  lastSrcPosition: {x: -2.15, y: 4.98, z: 0}
   wpsDropdown: 1
   dropToFloorOffset: 0

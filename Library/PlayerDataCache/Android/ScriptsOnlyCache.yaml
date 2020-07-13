@@ -1,31 +1,34 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BaseBoss
     - BaseEnemy
-    - Boss
     - Boundary
     - Bullet
-    - Bullet_Mini_Boss
-    - Bullet_Mini_Wing_Boss
-    - Bullet_Wave_Boss
-    - Bullet_Wing_Boss
-    - EFireHigh
-    - EnemyFire
+    - Bullet2WaveBoss
+    - BulletMiniBoss
+    - BulletMiniWingBoss
+    - BulletWaveBoss
+    - BulletWingBoss
+    - Coin
     - Gun_HandV2_Boss
     - Gun_Mini_Boss
-    - Gun_Swing_Boss
     - Gun_Wave_Boss
+    - Gun_Wing_Boss
+    - HighEnermyAttack
     - LevelManager
     - LevelTable
-    - MediumEnemy
+    - MediumEnermyAttack
+    - MediumEnermyMove
+    - PlayerAttack
+    - PlayerEarn
     - PlayerHealth
-    - PlayerTouchControl
+    - PlayerMove
     - RepeatingBackground
     - Rocket
-    - RotateToPlayer
     - ScrollingObject
-    - ShipWeapon
     - SpawnerTable
+    - TriggerScript
     - UI
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
@@ -39,6 +42,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -51,6 +60,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -71,6 +82,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 68
@@ -88,75 +101,81 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13892}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 13984}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 14122}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 14326}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 14534}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 14552}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 14616}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 14658}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 14746}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 14768}
+      Script: {instanceID: 12082}
     - Class: 114
-      Script: {instanceID: 14776}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 14868}
+      Script: {instanceID: 12224}
     - Class: 114
-      Script: {instanceID: 14898}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 14916}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 14984}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 15002}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 15066}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 15310}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 15462}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 15494}
+      Script: {instanceID: 12558}
     - Class: 114
-      Script: {instanceID: 15514}
+      Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 15524}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 15684}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 15836}
+      Script: {instanceID: 13092}
     - Class: 114
-      Script: {instanceID: 15842}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 15846}
+      Script: {instanceID: 13448}
     - Class: 114
-      Script: {instanceID: 15918}
+      Script: {instanceID: 13454}
     - Class: 114
-      Script: {instanceID: 15958}
+      Script: {instanceID: 13460}
+    - Class: 114
+      Script: {instanceID: 13552}
+    - Class: 114
+      Script: {instanceID: 13594}
+    - Class: 114
+      Script: {instanceID: 13640}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -188,10 +207,10 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: abeb454a3872806c7af382359e1f5d30
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RotateToPlayer
+    className: MediumEnermyMove
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -212,22 +231,22 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: eca96f3aed96cb72480989ad411efb6f
+      Hash: 5e16377a19ae2e70a1db57b2e06c960e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelManager
-  - hash:
-      serializedVersion: 2
-      Hash: 06aa8af96eecb2615ca40327a2d03750
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Gun_Parent_Boss
   - hash:
       serializedVersion: 2
       Hash: 318c615fec4344dbfb189fdca55ab7a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectPutter
+  - hash:
+      serializedVersion: 2
+      Hash: 5bd9a19c7b5f76c563418e28f48a561b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyPlayer
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -242,10 +261,16 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 504576121582cac7c9f6253d1152e836
+      Hash: a8f0df347931fa8f82df1586fcdb1879
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EFireHigh
+    className: HighEnermyAttack
+  - hash:
+      serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -270,6 +295,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: eafb77726b67b7571818a7210a3ce11e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkIdentity
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -300,6 +331,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: ad9173d3a69d99153f38ed4b62226129
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransform
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -338,13 +375,19 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 3f0b469d844365c00a63de0437c9b29e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkProximityChecker
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 55130b7678b80888b1a5142e5c7724ac
+      Hash: 9e2d2abb2d6eaad97685809a3879f8be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun_HandV2_Boss
@@ -362,6 +405,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -374,10 +423,10 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 3a5f4984f1a117342a92ed58b2b71250
+      Hash: 6f4483d4f9cd6d8ba8f6c860d74fa945
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: HealthManager
+    className: Coin
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -386,19 +435,31 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f85bd6f7e75dc8472268c8569a3d0abc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Gun_Fire_Boss
+    className: PlayerEarn
   - hash:
       serializedVersion: 2
-      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
+      Hash: b992221dfd094133c7cff3ee86c03cd6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerScript
+  - hash:
+      serializedVersion: 2
+      Hash: 3036e24aa2a8a022802d6a3ddf9b6417
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI
@@ -455,13 +516,25 @@ ScriptsOnlyBuild:
       Hash: b4f3f9087309ecf07e22ab93c38ec113
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet_Mini_Wing_Boss
+    className: BulletMiniWingBoss
+  - hash:
+      serializedVersion: 2
+      Hash: 265cf27ba050d55ff33a8acab4ded6c0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5887ef1bc706b22b773d253fd443ceef
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
       Hash: 06aa8af96eecb2615ca40327a2d03750
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Gun_Swing_Boss
+    className: Gun_Wing_Boss
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -473,7 +546,7 @@ ScriptsOnlyBuild:
       Hash: dd961648d9a2714a8eeef6e11750af2d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet_Wing_Boss
+    className: BulletWingBoss
   - hash:
       serializedVersion: 2
       Hash: b5fc3843e35dd6d09a719cb0d10ff4a5
@@ -488,10 +561,10 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: bf06f2e904f84a87eeb85d807823f68e
+      Hash: c4cfdfa943fbdcd2af70c8e1986735db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EnemyFire
+    className: MediumEnermyAttack
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -500,10 +573,16 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 2c5ebe10e13f6b3fbc2381892e34c068
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BaseEnemy
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkCallbacks
+  - hash:
+      serializedVersion: 2
+      Hash: 21e871d89bbce53c038fc75ad1b7c7f3
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -518,6 +597,12 @@ ScriptsOnlyBuild:
     className: LevelTable
   - hash:
       serializedVersion: 2
+      Hash: 64c6e3bcc467ab24c38112587fc05907
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet2WaveBoss
+  - hash:
+      serializedVersion: 2
       Hash: 704dcd31abc789439bc3f3cd10b58c2b
     assemblyName: DOTween.dll
     namespaceName: DG.Tweening.Core
@@ -530,7 +615,7 @@ ScriptsOnlyBuild:
     className: DOTweenSettings
   - hash:
       serializedVersion: 2
-      Hash: 4306e2c9b8874828982b086732d5dfd2
+      Hash: 4bbfbf29b4f6e23695808f3eaaa836dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun_Wave_Boss
@@ -548,10 +633,10 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 16149f7fa0fbd2bd634be62e7d90f13d
+      Hash: 6e3c8d9e8a511f9f1a425ca2eb9dd814
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ShipWeapon
+    className: PlayerAttack
   - hash:
       serializedVersion: 2
       Hash: 7b5fb984073deb7b28fe2738c0354515
@@ -575,13 +660,19 @@ ScriptsOnlyBuild:
       Hash: d2fa77628f3b731cc15ef0db9eae8dd2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet_Mini_Boss
+    className: BulletMiniBoss
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkStartPosition
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -626,13 +717,19 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 318c6c13a19c9fac98135ae14889de1b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkMigrationManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet_Fire_Boss
+    className: BulletFireBoss
   - hash:
       serializedVersion: 2
-      Hash: 06aa8af96eecb2615ca40327a2d03750
+      Hash: 93ac86c022876b38aebdf76737798775
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun_Mini_Boss
@@ -642,6 +739,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 06aa8af96eecb2615ca40327a2d03750
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossGun
+  - hash:
+      serializedVersion: 2
+      Hash: 24c74cc0d527a06113f2b967042769f0
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEditor.XR.LegacyInputHelpers
+    className: CameraOffset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkBehaviour
   - hash:
       serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
@@ -662,12 +777,6 @@ ScriptsOnlyBuild:
     className: DOTweenVisualManager
   - hash:
       serializedVersion: 2
-      Hash: abeb454a3872806c7af382359e1f5d30
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MediumEnemy
-  - hash:
-      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -677,7 +786,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerTouchControl
+    className: PlayerMove
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -690,6 +799,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 3a5f4984f1a117342a92ed58b2b71250
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1dcb82730d983b77cec736c6ef19f814
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkDiscovery
+  - hash:
+      serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -716,6 +843,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: e6ae40841db498b6e673877ac45ad208
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -734,7 +867,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: 752293b3edc74eb1f8b013ab4fbe05f2
+      Hash: 542b470b07a3b79dde99e5efe38d30db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealth
@@ -743,7 +876,7 @@ ScriptsOnlyBuild:
       Hash: 6a426ea3dd79e9a4b2e6b2f59b479abf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet_Wave_Boss
+    className: BulletWaveBoss
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -752,16 +885,28 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 367b75f0bd1410ddbade4b581258f6e8
+      Hash: 46a297ee93c81fdb8474f571b6e7d56a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnerTable
+  - hash:
+      serializedVersion: 2
+      Hash: 9b895dcabbc1faf095c000c32d471fd0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformChild
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: e0ee4b3d4e27318934cc940a969d3d96
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManagerHUD
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -818,10 +963,10 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 2ce8b8ffe221e500bd4fdc8300799d36
+      Hash: 0ed6c49bfc9e336909190a46da19325d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Boss
+    className: BaseBoss
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
@@ -834,7 +979,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 2c5ebe10e13f6b3fbc2381892e34c068
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BaseEnemy
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Build Androi/ban may bay.apk
+  playerPath: D:/BUILD/ban may bay v2.1.apk

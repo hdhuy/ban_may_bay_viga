@@ -100,7 +100,7 @@ public class BaseEnemy : HealthManager
             Reset();
         }
     }
-    protected virtual void SpawnCoin()
+    public virtual void SpawnCoin()
     {
         SpawnerType type = SpawnerType.CoinNormal;
         Vector2 force = Vector2.zero;
@@ -112,7 +112,7 @@ public class BaseEnemy : HealthManager
         coin.position = transform.position;
         coin.GetComponent<Rigidbody2D>().AddForce(force);
     }
-    protected void Reset()
+    public void Reset()
     {
         currentHealth = health;
         transform.DOKill();

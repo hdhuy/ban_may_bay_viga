@@ -19,7 +19,7 @@ public class MediumEnermyAttack : MonoBehaviour
     public Transform Right_3;
     //[SerializeField]
     //private List<float> rotZ;
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(Fire());
     }

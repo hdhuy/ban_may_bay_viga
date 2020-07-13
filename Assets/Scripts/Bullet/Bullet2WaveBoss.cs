@@ -24,7 +24,7 @@ public class Bullet2WaveBoss : Bullet
     {
         if (isSpriteRot)
         {
-            Image.transform.Rotate(0, 0, 3 * Time.deltaTime);
+            Image.transform.Rotate(new Vector3(0, 0, RotSpeed * Time.deltaTime));
         }
         if (Target != null)
         {

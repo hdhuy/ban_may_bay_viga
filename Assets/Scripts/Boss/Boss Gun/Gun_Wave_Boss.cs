@@ -10,6 +10,8 @@ public class Gun_Wave_Boss : BossGun
     public float limit_1;
     public float limit_2;
     private Transform Player;
+    private bool changed;
+    public float BulletRotSpeed;
     private void Start()
     {
         StartCoroutine(Shoot());
@@ -24,7 +26,10 @@ public class Gun_Wave_Boss : BossGun
                 transform.rotation = q;
             }
         }
-        Reset();
+        if (destroyed == 10&&changed==false)
+        {
+            StartCoroutine(Reset());
+        }
     }
     private Quaternion RotToPlayer()
     {
@@ -35,7 +40,7 @@ public class Gun_Wave_Boss : BossGun
     }
     private bool ReadyToRotate()
     {
-        if (GameObject.Find("Player") != null&& rotToPlayer)
+        if (GameObject.Find("Player") != null && rotToPlayer)
         {
             Player = GameObject.Find("Player").transform;
             if (destroyed < 10 && Blood > 0)
@@ -53,13 +58,14 @@ public class Gun_Wave_Boss : BossGun
             return false;
         }
     }
-    private void Reset()
+    IEnumerator Reset()
     {
-        if (destroyed == 10&&isDead==true)
+        yield return new WaitForSeconds(5);
+        if (isDead == true && changed == false)
         {
+            changed = true;
             Blood = 100;
             isDead = false;
-            HealthBarParent.SetActive(true);
             HealthBar.transform.localScale = new Vector3(1, 1, 1);
             StartCoroutine(Shoot2());
         }
@@ -69,6 +75,10 @@ public class Gun_Wave_Boss : BossGun
         if (isDead == false)
         {
             Blood -= dam;
+            if (changed == true)
+            {
+                HealthBarParent.SetActive(true);
+            }
             //hieu ung
             Transform vfx = ObjectPutter.Instance.PutObject(SpawnerType.SmallExplosion, ObjectType.Effect);
             vfx.position = transform.position;
@@ -77,7 +87,6 @@ public class Gun_Wave_Boss : BossGun
                 destroyed++;
                 HealthBarParent.SetActive(false);
                 checkBossLevel();
-                //Debug.Log(destroyed);
                 isDead = true;
             }
             else
@@ -89,18 +98,18 @@ public class Gun_Wave_Boss : BossGun
     }
     IEnumerator Shoot()
     {
-        rotToPlayer = false;
-        createBullet();
-        yield return new WaitForSeconds(WaitShoot);
-        createBullet();
-        yield return new WaitForSeconds(WaitShoot);
-        createBullet();
-        yield return new WaitForSeconds(WaitShoot);
-        createBullet();
-        rotToPlayer = true;
-        yield return new WaitForSeconds(5f);
-        if (destroyed < 10&& Blood > 0)
+        if (destroyed < 10 && Blood > 0)
         {
+            rotToPlayer = false;
+            createBullet();
+            yield return new WaitForSeconds(WaitShoot);
+            createBullet();
+            yield return new WaitForSeconds(WaitShoot);
+            createBullet();
+            yield return new WaitForSeconds(WaitShoot);
+            createBullet();
+            rotToPlayer = true;
+            yield return new WaitForSeconds(5f);
             StartCoroutine(Shoot());
         }
     }
@@ -115,11 +124,12 @@ public class Gun_Wave_Boss : BossGun
     }
     private void ShootRocket()
     {
-        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet2_Wave_Boss,ObjectType.Bullet);
+        Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet2_Wave_Boss, ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;
         bullet1.position = FirePoint.position;//1
         bullet1.GetComponent<Rigidbody2D>().velocity = transform.up * 5;
         bullet1.GetComponent<Bullet>().Activate();
+        bullet1.GetComponent<Bullet2WaveBoss>().RotSpeed = BulletRotSpeed;
     }
     private void createBullet()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class PlayerMove : Player
+public class PlayerMove : MonoBehaviour
 {
     private Camera m_camera;
 

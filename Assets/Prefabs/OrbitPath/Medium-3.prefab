@@ -1,0 +1,264 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6588353853201762805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7506385981952374532}
+  - component: {fileID: 4958366864373477702}
+  m_Layer: 0
+  m_Name: Medium-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7506385981952374532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588353853201762805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46, y: 4.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4958366864373477702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588353853201762805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  delay: 0
+  duration: 13
+  easeType: 1
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loops: -1
+  id: 
+  loopType: 1
+  orientType: 0
+  lookAtTransform: {fileID: 0}
+  lookAtPosition: {x: 0, y: 0, z: 0}
+  lookAhead: 0.01
+  autoPlay: 1
+  autoKill: 1
+  relative: 0
+  isLocal: 0
+  isClosedPath: 0
+  pathResolution: 10
+  pathMode: 0
+  lockRotation: 0
+  assignForwardAndUp: 0
+  forwardDirection: {x: 0, y: 0, z: 1}
+  upDirection: {x: 0, y: 1, z: 0}
+  tweenRigidbody: 0
+  wps:
+  - {x: 2.0089204, y: 3.3298478, z: 0}
+  - {x: -2.0375423, y: 3.0172153, z: 0}
+  - {x: 1.9856222, y: 1.5223931, z: 0}
+  - {x: -2.002447, y: 1.0992709, z: 0}
+  fullWps: []
+  path:
+    wpLengths:
+    - 0
+    - 2.7888021
+    - 4.0883617
+    - 4.3242226
+    - 4.049507
+    type: 1
+    subdivisionsXSegment: 10
+    subdivisions: 50
+    wps:
+    - {x: -0.46, y: 4.49, z: 0}
+    - {x: 2.0089204, y: 3.3298478, z: 0}
+    - {x: -2.0375423, y: 3.0172153, z: 0}
+    - {x: 1.9856222, y: 1.5223931, z: 0}
+    - {x: -2.002447, y: 1.0992709, z: 0}
+    controlPoints:
+    - a: {x: 2.0089204, y: 3.3298478, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    - a: {x: -5.9905157, y: 0.6761488, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    length: 15.262354
+    isFinalized: 1
+    timesTable:
+    - 0.02
+    - 0.04
+    - 0.06
+    - 0.08
+    - 0.099999994
+    - 0.12
+    - 0.14
+    - 0.16
+    - 0.17999999
+    - 0.19999999
+    - 0.22
+    - 0.24
+    - 0.26
+    - 0.28
+    - 0.29999998
+    - 0.32
+    - 0.34
+    - 0.35999998
+    - 0.38
+    - 0.39999998
+    - 0.42
+    - 0.44
+    - 0.45999998
+    - 0.48
+    - 0.5
+    - 0.52
+    - 0.53999996
+    - 0.56
+    - 0.58
+    - 0.59999996
+    - 0.62
+    - 0.64
+    - 0.65999997
+    - 0.68
+    - 0.7
+    - 0.71999997
+    - 0.74
+    - 0.76
+    - 0.78
+    - 0.79999995
+    - 0.82
+    - 0.84
+    - 0.85999995
+    - 0.88
+    - 0.9
+    - 0.91999996
+    - 0.94
+    - 0.96
+    - 0.97999996
+    - 1
+    lengthsTable:
+    - 0.052275803
+    - 0.19695596
+    - 0.41582656
+    - 0.69068724
+    - 1.0033581
+    - 1.3356929
+    - 1.669601
+    - 1.9870956
+    - 2.2704086
+    - 2.502309
+    - 2.6673253
+    - 2.759601
+    - 2.8482878
+    - 3.0390213
+    - 3.3278732
+    - 3.694791
+    - 4.118035
+    - 4.575422
+    - 5.0446224
+    - 5.503271
+    - 5.929053
+    - 6.299817
+    - 6.5938964
+    - 6.7913957
+    - 6.885035
+    - 6.994851
+    - 7.220889
+    - 7.5494266
+    - 7.9577036
+    - 8.421589
+    - 8.916566
+    - 9.417988
+    - 9.901197
+    - 10.341613
+    - 10.714901
+    - 10.997489
+    - 11.169144
+    - 11.24714
+    - 11.361191
+    - 11.54735
+    - 11.801365
+    - 12.113161
+    - 12.471305
+    - 12.863898
+    - 13.278846
+    - 13.703969
+    - 14.127057
+    - 14.535903
+    - 14.91835
+    - 15.262354
+  inspectorMode: 0
+  pathType: 1
+  handlesType: 0
+  livePreview: 1
+  handlesDrawMode: 0
+  perspectiveHandleSize: 0.5
+  showIndexes: 1
+  showWpLength: 0
+  pathColor: {r: 1, g: 1, b: 1, a: 0.5}
+  lastSrcPosition: {x: -0.46, y: 4.49, z: 0}
+  wpsDropdown: 1
+  dropToFloorOffset: 0
