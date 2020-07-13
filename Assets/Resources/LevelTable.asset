@@ -19,7 +19,7 @@ MonoBehaviour:
       enemyType: 1
       enemyNum: 13
       isRotateToPath: 1
-      mainPath: {fileID: 2634588573182194561, guid: b0118be7b5400644e98a840dc7d4a97c,
+      mainPath: {fileID: 8096846197863220076, guid: a4c17f84a17f63147914e233f7b39c11,
         type: 3}
       additionPath: {fileID: 0}
     - timeStart: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
       enemyType: 1
       enemyNum: 13
       isRotateToPath: 1
-      mainPath: {fileID: 6663400309764260989, guid: 4994ffd8bd61b3742829c17376c8fda9,
+      mainPath: {fileID: 6759535956332848471, guid: d42e3da048c3b3b40a62ed893e584b71,
         type: 3}
       additionPath: {fileID: 0}
   - orbitList:
@@ -36,18 +36,18 @@ MonoBehaviour:
       enemyType: 2
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 5239768432973082401, guid: 1cf3109f87815a44a90b00ac3d471f7c,
+      mainPath: {fileID: 985250383391643805, guid: 28ac6765a8ce458429bc0543b867efea,
         type: 3}
-      additionPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
+      additionPath: {fileID: 1662886047993302986, guid: 7c35d63f4323d44418ea5e9d2b1d92bd,
         type: 3}
     - timeStart: 6
       timeDelay: 0.4
       enemyType: 2
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 5239768432973082401, guid: 1cf3109f87815a44a90b00ac3d471f7c,
+      mainPath: {fileID: 985250383391643805, guid: 28ac6765a8ce458429bc0543b867efea,
         type: 3}
-      additionPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
+      additionPath: {fileID: 1662886047993302986, guid: 7c35d63f4323d44418ea5e9d2b1d92bd,
         type: 3}
   - orbitList:
     - timeStart: 2
@@ -55,7 +55,7 @@ MonoBehaviour:
       enemyType: 0
       enemyNum: 15
       isRotateToPath: 1
-      mainPath: {fileID: 3669260428996763416, guid: b525a4eeb0ea9a84bafaef821049e15c,
+      mainPath: {fileID: 4725070222026020067, guid: e984882150d033746abaf81e9ff5a963,
         type: 3}
       additionPath: {fileID: 0}
   - orbitList:
@@ -83,7 +83,7 @@ MonoBehaviour:
       enemyType: 4
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 3563420737056323704, guid: 0a1b2af618e96b2409afa71fe97cc010,
+      mainPath: {fileID: 985250383391643805, guid: 28ac6765a8ce458429bc0543b867efea,
         type: 3}
-      additionPath: {fileID: 5251040130643362312, guid: 4c24e825b66a40d4da56bbf55a0b7ef9,
+      additionPath: {fileID: 1662886047993302986, guid: 7c35d63f4323d44418ea5e9d2b1d92bd,
         type: 3}

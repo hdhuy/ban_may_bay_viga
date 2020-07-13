@@ -7,7 +7,7 @@ public class BaseBoss : BaseEnemy
     public bool isProtected=true;
     public Transform healthBar;
     public Transform currentHealthBar;
-    private void Start()
+    private void OnEnable()
     {
         setLevel_1();
     }
@@ -54,9 +54,10 @@ public class BaseBoss : BaseEnemy
     }
     public void setLevel_1()
     {
+        healthBar.gameObject.SetActive(false);
+        GetComponent<Animator>().SetInteger("next", 0);
         GetComponent<Animator>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
-        
     }
     public void setLevel_2()
     {
@@ -67,7 +68,7 @@ public class BaseBoss : BaseEnemy
         //GetComponent<BossHealth>().isProtected = false;
         isProtected = false;
        GetComponent<Collider2D>().enabled = true;
-        
+        healthBar.gameObject.SetActive(true);
         GetComponent<Animator>().SetInteger("next", 1);
     }
     IEnumerator Changing()

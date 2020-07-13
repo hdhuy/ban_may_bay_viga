@@ -9,7 +9,13 @@ public class BossGun : MonoBehaviour
     public int Blood = 100;
     public static int destroyed = 0;
     protected bool isDead;
+    protected static bool isStatus2;
     //static
+    private void OnEnable()
+    {
+        Blood = 100;
+        isDead = false;
+    }
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerBullet"))
@@ -41,7 +47,7 @@ public class BossGun : MonoBehaviour
                 checkBossLevel();
                 Debug.Log(destroyed);
                 isDead = true;
-                Transform smoke = ObjectPutter.Instance.PutObject(SpawnerType.Smoke, ObjectType.Effect);
+                Transform smoke = ObjectPutter.Instance.PutObject(SpawnerType.MediumExplosion, ObjectType.Effect);
                 smoke.position = FirePoint.position;
             }
             else
@@ -62,10 +68,12 @@ public class BossGun : MonoBehaviour
             if (destroyed == 10)
             {
                 boss.GetComponent<BaseBoss>().setLevel_2();
+                isStatus2 = true;
             }
             if (destroyed == 14)
             {
                 boss.GetComponent<BaseBoss>().setLevel_3();
+                destroyed = 0;
             }
         }
         else

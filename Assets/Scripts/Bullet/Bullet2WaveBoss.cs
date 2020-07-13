@@ -9,7 +9,7 @@ public class Bullet2WaveBoss : Bullet
     public bool isMoveToTarget;
     public GameObject Image;
     public bool isSpriteRot;
-    private void Start()
+    private void OnEnable()
     {
         if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
         {

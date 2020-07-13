@@ -6,6 +6,10 @@ using UnityEngine;
 public class BulletMiniWingBoss : Bullet
 {
     public float rotSpeed;
+    private void OnEnable()
+    {
+        transform.localEulerAngles = Vector3.zero;
+    }
     void Update()
     {
         try
