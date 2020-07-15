@@ -16,9 +16,10 @@ MonoBehaviour:
   - orbitList:
     - timeStart: 1
       timeDelay: 0.4
-      enemyType: 3
+      enemyType: 4
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 3563420737056323704, guid: 0a1b2af618e96b2409afa71fe97cc010,
+      mainPath: {fileID: 398720611047128294, guid: a6b78eb10e24aa1489483de8924cb757,
         type: 3}
-      additionPath: {fileID: 0}
+      additionPath: {fileID: 4014551184762938374, guid: c0fef6d12b076744c8eaca989b4a866b,
+        type: 3}

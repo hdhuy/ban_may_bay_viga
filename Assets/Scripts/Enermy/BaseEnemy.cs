@@ -103,7 +103,9 @@ public class BaseEnemy : HealthManager
     public virtual void SpawnCoin()
     {
         SpawnerType type = SpawnerType.CoinNormal;
-        Vector2 force = Vector2.zero;
+        float f = UnityEngine.Random.Range(-25, 25);
+        Debug.Log(f);
+        Vector2 force = new Vector2(f,0);
         createCoin(type,force);
     }
     protected void createCoin(SpawnerType type,Vector2 force)

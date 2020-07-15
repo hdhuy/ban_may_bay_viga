@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd846cae44adfeb44980e7c7f5d855b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 3
   damage: 5
   MaxScale: 1.2
   ChangePerFrame: 0.002

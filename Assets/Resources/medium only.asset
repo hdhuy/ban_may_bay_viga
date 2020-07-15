@@ -16,9 +16,19 @@ MonoBehaviour:
   - orbitList:
     - timeStart: 1
       timeDelay: 0
-      enemyType: 1
+      enemyType: 2
       enemyNum: 1
       isRotateToPath: 0
-      mainPath: {fileID: 1589479881221870936, guid: 22d31b017cd848348a1df4a50c228cac,
+      mainPath: {fileID: 985250383391643805, guid: af870e419fab9004b8a82dde6ccab14e,
         type: 3}
-      additionPath: {fileID: 0}
+      additionPath: {fileID: 2383977884739293859, guid: 0f6e9ea119aa1e14bb6bd9f70da79125,
+        type: 3}
+    - timeStart: 3
+      timeDelay: 0
+      enemyType: 2
+      enemyNum: 1
+      isRotateToPath: 0
+      mainPath: {fileID: 985250383391643805, guid: af870e419fab9004b8a82dde6ccab14e,
+        type: 3}
+      additionPath: {fileID: 2383977884739293859, guid: 0f6e9ea119aa1e14bb6bd9f70da79125,
+        type: 3}

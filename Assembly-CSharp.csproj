@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Enum\ExplosionEffectType.cs" />
     <Compile Include="Assets\Scripts\Enum\ObjectType.cs" />
     <Compile Include="Assets\Scripts\Enum\SpawnerType.cs" />
+    <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\ObjectPutter\ObjectPutter.cs" />
     <Compile Include="Assets\Scripts\ObjectPutter\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />

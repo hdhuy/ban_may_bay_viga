@@ -6,9 +6,13 @@ public class Gun_Wing_Boss : BossGun
 {
     private void Start()
     {
+        StartCoroutine(firstWait());
+    }
+    IEnumerator firstWait()
+    {
+        yield return new WaitForSeconds(3);
         StartCoroutine(ShootWing());
     }
-    
     IEnumerator ShootWing()
     {
         if (Blood > 0)

@@ -55,24 +55,38 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onPlay:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onUpdate:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onStepComplete:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onRewind:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 17
   easeType: 37
@@ -151,7 +165,7 @@ MonoBehaviour:
     - 0.7730676
     - 0.8868262
     - 1.3959346
-    - 1.7781625
+    - 1.7781622
     - 1.4511827
     - 2.3192523
     - 2.1231046
@@ -328,15 +342,15 @@ MonoBehaviour:
     lengthsTable:
     - 0.009100771
     - 0.032756172
-    - 0.06550879
-    - 0.10193312
-    - 0.13668036
-    - 0.16464016
-    - 0.18191427
-    - 0.19559374
-    - 0.22813806
-    - 0.28902304
-    - 0.38480985
+    - 0.0655088
+    - 0.10193314
+    - 0.1366804
+    - 0.16464019
+    - 0.1819143
+    - 0.19559377
+    - 0.22813809
+    - 0.28902307
+    - 0.38480988
     - 0.5268005
     - 0.71105677
     - 0.9279672
@@ -366,34 +380,34 @@ MonoBehaviour:
     - 3.8327398
     - 3.9192812
     - 4.007624
-    - 4.0975904
-    - 4.1892977
-    - 4.283204
-    - 4.3821387
-    - 4.489233
-    - 4.6042814
-    - 4.726709
-    - 4.8557124
-    - 4.990335
-    - 5.1295204
-    - 5.272145
-    - 5.4170427
-    - 5.5630207
-    - 5.709135
-    - 5.867129
-    - 6.0403967
-    - 6.223955
-    - 6.41279
-    - 6.601926
-    - 6.7865095
-    - 6.9619126
-    - 7.123926
-    - 7.2691307
-    - 7.3957014
-    - 7.50679
-    - 7.622721
-    - 7.748174
-    - 7.881867
+    - 4.097591
+    - 4.189298
+    - 4.2832046
+    - 4.382139
+    - 4.4892335
+    - 4.604282
+    - 4.7267094
+    - 4.855713
+    - 4.9903355
+    - 5.129521
+    - 5.2721453
+    - 5.417043
+    - 5.563021
+    - 5.7091355
+    - 5.8671293
+    - 6.040397
+    - 6.2239556
+    - 6.4127903
+    - 6.6019263
+    - 6.78651
+    - 6.961913
+    - 7.1239266
+    - 7.269131
+    - 7.395702
+    - 7.5067906
+    - 7.6227217
+    - 7.7481747
+    - 7.8818674
     - 8.02165
     - 8.1650095
     - 8.309414

@@ -12,8 +12,20 @@ public class Gun_Wave_Boss : BossGun
     private Transform Player;
     private bool changed;
     public float BulletRotSpeed;
-    private void Start()
+    //
+    private bool first;
+    private void OnEnable()
+    { 
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        rotToPlayer = true;
+        first = true;
+    }
+    IEnumerator firstWait()
     {
+        yield return new WaitForSeconds(3);
         StartCoroutine(Shoot());
     }
     private void Update()
@@ -24,6 +36,11 @@ public class Gun_Wave_Boss : BossGun
             if (q.eulerAngles.z > limit_1 && q.eulerAngles.z < limit_2)
             {
                 transform.rotation = q;
+                if (first)
+                {
+                    StartCoroutine(firstWait());
+                    first = false;
+                }
             }
         }
         if (destroyed == 10&&changed==false)
@@ -40,9 +57,8 @@ public class Gun_Wave_Boss : BossGun
     }
     private bool ReadyToRotate()
     {
-        if (GameObject.Find("Player") != null && rotToPlayer)
+        if (Player!= null && rotToPlayer)
         {
-            Player = GameObject.Find("Player").transform;
             if (destroyed < 10 && Blood > 0)
             {
                 return true;
@@ -88,6 +104,8 @@ public class Gun_Wave_Boss : BossGun
                 HealthBarParent.SetActive(false);
                 checkBossLevel();
                 isDead = true;
+                SmokeDead.Play();
+                rotToPlayer = false;
             }
             else
             {
@@ -117,12 +135,12 @@ public class Gun_Wave_Boss : BossGun
     {
         if (Blood > 0)
         {
-            ShootRocket();
+            createRocketCircle();
             yield return new WaitForSeconds(1f);
             StartCoroutine(Shoot2());
         }
     }
-    private void ShootRocket()
+    private void createRocketCircle()
     {
         Transform bullet1 = ObjectPutter.Instance.PutObject(SpawnerType.Bullet2_Wave_Boss, ObjectType.Bullet);
         bullet1.rotation = transform.localRotation;

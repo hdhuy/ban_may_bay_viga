@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    public GameObject panel;
     public GameObject Player;
-    public GameObject WhenPlayerDie;
+    public Animator WhenPlayerWin;
+    public Animator WhenPlayerDie;
     public Button btn50coin;
     public Text TextCoin;
     //
@@ -37,25 +37,28 @@ public class UI : MonoBehaviour
         PlayerPrefs.SetInt("coin", coin);
         setPlayerLive();
         TextCoin.text = coin.ToString();
+        WhenPlayerDie.SetBool("in", false);
     }
     public void setPlayerLive()
     {
         Player.GetComponent<PlayerHealth>().Reset();
         Time.timeScale = 1;
-        WhenPlayerDie.SetActive(false);
+        WhenPlayerDie.SetBool("in", false);
     }
     public void loadThisScene()
     {
-        SceneManager.LoadScene(0);
+        WhenPlayerDie.SetBool("in", false);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
     public void exit()
     {
-        Application.Quit(0);
+        SceneManager.LoadScene(0);
     }
-    public void showPanel(bool s)
+    public void showWhenLose(bool s)
     {
-        panel.SetActive(s);
+        WhenPlayerDie.enabled = true;
+        WhenPlayerDie.SetBool("in", true);
         int coin = PlayerPrefs.GetInt("coin");
         if (coin >= 50)
         {

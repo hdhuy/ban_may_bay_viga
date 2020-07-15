@@ -55,24 +55,38 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onPlay:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onUpdate:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onStepComplete:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onRewind:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 16
   easeType: 37
@@ -149,15 +163,15 @@ MonoBehaviour:
     - 0
     - 0.1719355
     - 1.1965547
-    - 2.2755842
+    - 2.2755845
     - 0.7419933
-    - 1.0767341
-    - 1.7311971
+    - 1.0767342
+    - 1.7311974
     - 1.7775141
     - 1.4511827
     - 2.3147125
     - 1.9912808
-    - 1.6767335
+    - 1.6767336
     - 2.0013764
     - 1.8799965
     - 1.3097837
@@ -356,8 +370,8 @@ MonoBehaviour:
     - 0.5377467
     - 0.65136224
     - 0.77158386
-    - 0.8971434
-    - 1.0275335
+    - 0.89714336
+    - 1.0275334
     - 1.1632235
     - 1.305831
     - 1.4617378

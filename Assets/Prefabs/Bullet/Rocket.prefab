@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c931aa5056d60a4d8092450fa4a485a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   damage: 5
   Target: {fileID: 0}
   RotSpeed: 180

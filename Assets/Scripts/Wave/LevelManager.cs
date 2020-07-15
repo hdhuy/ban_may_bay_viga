@@ -6,12 +6,17 @@ public class LevelManager : MonoBehaviour
 {
     public LevelTable levelTable;
     public Text messText;
-    public GameObject EndPanel;
+    public Animator WhenWinGame;
+    public GameObject Player;
     private int currentEnemyDestroy;
 
     private void Start()
     {
         StartCoroutine(CreateLevel());
+        if (!Player)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
     IEnumerator setUI(string text)
     {
@@ -52,9 +57,16 @@ public class LevelManager : MonoBehaviour
             }
             yield return new WaitUntil(() => (currentEnemyDestroy == wave.TotalEnemy));
         }
-        EndPanel.SetActive(true);
+        StartCoroutine(Win());
     }
-
+    IEnumerator Win()
+    {
+        yield return new WaitForSeconds(3);
+        WhenWinGame.enabled = true;
+        WhenWinGame.SetBool("in", true);
+        Player.GetComponent<PlayerMove>().isWin = true;
+        Player.GetComponent<PlayerHealth>().enabled = false;
+    }
     public IEnumerator SpawnEnemyOrbit(Orbit orbit)
     {
         yield return new WaitForSeconds(orbit.timeStart);

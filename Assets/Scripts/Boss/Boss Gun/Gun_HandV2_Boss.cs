@@ -31,6 +31,7 @@ public class Gun_HandV2_Boss : BossGun
                 isDead = true;
                 GetComponent<Animator>().enabled = false;
                 Gun.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                SmokeDead.Play();
             }
             else
             {
@@ -47,10 +48,8 @@ public class Gun_HandV2_Boss : BossGun
     IEnumerator FirePlay()
     {
         Fire.Play();
-        Gun.GetComponent<TriggerScript>().isFire = true;
         yield return new WaitForSeconds(3);
         Fire.Stop();
-        Gun.GetComponent<TriggerScript>().isFire = false;
         yield return new WaitForSeconds(3);
         if (isDead==false)
         {

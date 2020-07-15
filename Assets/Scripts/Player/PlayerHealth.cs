@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int Health = 100;
-    public int CurrentHealth;
+    public float Health = 100;
+    public float CurrentHealth;
     public GameObject HealthBar;
     public GameObject Protect;
     private bool isProtecd;
@@ -24,12 +24,12 @@ public class PlayerHealth : MonoBehaviour
         Protect.SetActive(false);
         isProtecd = false;
     }
+    public void beEnterTrigger(float dam)
+    {
+        BeHurt(dam);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EditorOnly"))
-        {
-            Debug.Log("player enter " + collision.tag);
-        }
         if (collision.CompareTag("EnermyBullet"))
         {
             int dam = collision.gameObject.GetComponent<Bullet>().damage;
@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
             exp.position = collision.transform.position;
             collision.gameObject.SetActive(false);
         }
-        if (collision.CompareTag("Enermy")|| collision.CompareTag("Boss"))
+        if (collision.CompareTag("Enermy") || collision.CompareTag("Boss"))
         {
             BeHurt(1000);
             //eff
@@ -51,22 +51,29 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-    private void BeHurt(int dam)
+    private void BeHurt(float dam)
     {
-        if (!isProtecd)
-        CurrentHealth -= dam;
-        if (CurrentHealth <= 0)
+        if (CurrentHealth > 0)
         {
-            Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
-            exp.position = transform.position;
-            HealthBar.transform.localScale = new Vector3(0, 1, 1);
-            WaitToReSpawn();gameObject.SetActive(false);
+            if (!isProtecd)
+            {
+                CurrentHealth -= dam;
+                if (CurrentHealth <= 0)
+                {
+                    Transform exp = ObjectPutter.Instance.PutObject(SpawnerType.PlayerExplosion, ObjectType.Effect);
+                    exp.position = transform.position;
+                    HealthBar.transform.localScale = new Vector3(0, 1, 1);
+                    gameObject.SetActive(false);
+                    WaitToReSpawn();
+                }
+                else
+                {
+                    float scale = CurrentHealth * 0.01f;
+                    HealthBar.transform.localScale = new Vector3(scale, 1, 1);
+                }
+            }
         }
-        else
-        {
-            float scale = CurrentHealth * 0.01f;
-            HealthBar.transform.localScale = new Vector3(scale, 1, 1);
-        }
+
     }
     public void Reset()
     {
@@ -78,6 +85,6 @@ public class PlayerHealth : MonoBehaviour
     private void WaitToReSpawn()
     {
         Time.timeScale = 0.3f;
-        ui.showPanel(true);
+        ui.showWhenLose(true);
     }
 }

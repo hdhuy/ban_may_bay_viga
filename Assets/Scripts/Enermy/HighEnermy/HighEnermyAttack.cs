@@ -17,10 +17,10 @@ public class HighEnermyAttack : MonoBehaviour
     {
         Shoot1(Left);
         Shoot1(Right);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Shoot1(Left);
         Shoot1(Right);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         ShootRocket();
         yield return new WaitForSeconds(1);
         StartCoroutine(Shoot());

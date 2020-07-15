@@ -8,6 +8,7 @@ public class BossGun : MonoBehaviour
     public Transform FirePoint;
     public int Blood = 100;
     public static int destroyed = 0;
+    public ParticleSystem SmokeDead;
     protected bool isDead;
     protected static bool isStatus2;
     //static
@@ -49,6 +50,7 @@ public class BossGun : MonoBehaviour
                 isDead = true;
                 Transform smoke = ObjectPutter.Instance.PutObject(SpawnerType.MediumExplosion, ObjectType.Effect);
                 smoke.position = FirePoint.position;
+                SmokeDead.Play();
             }
             else
             {

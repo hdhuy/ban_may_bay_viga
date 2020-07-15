@@ -9,9 +9,11 @@ public class HighEnermyMove : BaseEnemy
     public Transform currentHealthBar;
     public override void SpawnCoin()
     {
-        createCoin(SpawnerType.CoinNormal, new Vector2(15, 0));
-        createCoin(SpawnerType.CoinNormal, new Vector2(-15, 0));
-        createCoin(SpawnerType.CoinHigh, new Vector2(0, 5));
+        float r = Random.Range(13, 20);
+        float r2 = Random.Range(5, 10);
+        createCoin(SpawnerType.CoinNormal, new Vector2(r, r2));
+        createCoin(SpawnerType.CoinNormal, new Vector2(-r2, r));
+        createCoin(SpawnerType.CoinHigh, new Vector2(2, r2));
     }
     public override void DecreaHealth(int bulletDamage)
     {

@@ -22,12 +22,21 @@ public class MediumEnermyMove : BaseEnemy
             if (player.x == transform.position.x)
             {
                 z = 0;
+                if (GetComponent<MediumEnermyAttack>() != null)
+                {
+                    GetComponent<MediumEnermyAttack>().rot = 0;
+                }
             }
             else
             {
                 if (player.x < transform.position.x)
                 {
                     z = -20;
+                    GetComponent<MediumEnermyAttack>().rot = -1;
+                }
+                else
+                {
+                    GetComponent<MediumEnermyAttack>().rot = 1;
                 }
             }
             transform.DORotate(new Vector3(0, 0, z), 1);
@@ -42,9 +51,11 @@ public class MediumEnermyMove : BaseEnemy
     }
     public override void SpawnCoin()
     {
-        createCoin(SpawnerType.CoinNormal, new Vector2(15, 0));
-        createCoin(SpawnerType.CoinNormal, new Vector2(-15, 0));
-        createCoin(SpawnerType.CoinHigh, new Vector2(0, 5));
+        float r = Random.Range(13, 20);
+        float r2 = Random.Range(3, 7);
+        createCoin(SpawnerType.CoinNormal, new Vector2(r, r2));
+        createCoin(SpawnerType.CoinNormal, new Vector2(-r2, r));
+        createCoin(SpawnerType.CoinHigh, new Vector2(2, r2));
     }
     public override void DecreaHealth(int bulletDamage)
     {

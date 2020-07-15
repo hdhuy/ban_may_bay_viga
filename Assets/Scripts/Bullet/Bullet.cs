@@ -17,6 +17,6 @@ public class Bullet : MonoBehaviour
     public virtual void Activate()
     {
         _rigidbody2D.velocity = transform.up * speed;
-        transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+        //transform.localRotation = Quaternion.Euler(0,0,0);
     }
 }
